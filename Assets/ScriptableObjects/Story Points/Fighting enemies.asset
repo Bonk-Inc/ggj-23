@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42683cf721010d46884de52e36da3ef, type: 3}
+  m_Name: Fighting enemies
+  m_EditorClassIdentifier: 
+  <Title>k__BackingField: Fighting enemies
+  <Story>k__BackingField: YOU BE KICKING THOSE ENEMIES ASSES!!
+  <Background>k__BackingField: {fileID: 0}
+  <Music>k__BackingField: {fileID: 0}
+  <Decisions>k__BackingField:
+  - {fileID: 11400000, guid: 3c72c772a083b234aa1ac869a2fad4c3, type: 2}
+  - {fileID: 11400000, guid: 9206f24bdab21b74c904ba2e45c5a423, type: 2}
+  - {fileID: 11400000, guid: 9d6d68c31381b784bbe58bfb3d685a84, type: 2}

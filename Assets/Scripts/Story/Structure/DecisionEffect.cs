@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Effect", menuName = "story/effect")]
+
 public abstract class DecisionEffect : ScriptableObject
 {
     [SerializeField]

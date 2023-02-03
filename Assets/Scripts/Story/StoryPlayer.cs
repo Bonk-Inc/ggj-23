@@ -28,6 +28,11 @@ public class StoryPlayer : MonoBehaviour
 
     private void OnDecisionMade(Decision decision)
     {
+        foreach (var effect in decision.Effects)
+        {
+            effect.DoEffect(decision.overrideParameters ? decision.Params : null);
+        }
+
         var nextPoint = decision.Next ?? possibleRandomPoints.GetRandom();
         storyPointUi.SetStoryPoint(nextPoint);
     }
