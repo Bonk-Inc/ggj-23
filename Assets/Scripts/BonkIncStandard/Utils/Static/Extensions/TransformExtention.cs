@@ -64,4 +64,21 @@ public static class TransformExtensions
         scale.z = z;
         transform.localScale = scale;
     }
+
+    public static Transform CommitChildAbortion(this Transform transform)
+    {
+        foreach (Transform child in transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+        return transform;
+    }
+
+    public static Transform CommitImmediateChildAbortion(this Transform transform)
+    {
+        for (int i = transform.childCount; i > 0; --i)
+            GameObject.DestroyImmediate(transform.GetChild(0).gameObject);
+
+        return transform;
+    }
 }

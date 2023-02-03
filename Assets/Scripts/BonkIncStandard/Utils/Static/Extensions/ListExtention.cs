@@ -5,27 +5,37 @@ using UnityEngine;
 
 public static class ListExtention
 {
+    public static T Pop<T>(this List<T> list)
+    {
+        if (list.Count == 0)
+            throw new System.Exception("Can not pop from empty list");
+
+        var item = list[0];
+        list.RemoveAt(0);
+        return item;
+    }
+
     public static T GetRandom<T>(this List<T> list)
     {
-        if(list.Count == 0) 
+        if (list.Count == 0)
             throw new System.Exception("Cannot get random element from empty list");
-        
+
         var randomIndex = Random.Range(0, list.Count);
         return list[randomIndex];
     }
-    
+
     public static bool UnorderedEqual<T>(this ICollection<T> a, ICollection<T> b)
     {
         if (a.Count != b.Count)
             return false;
-        
+
         var d = new Dictionary<T, int>();
         foreach (var item in a)
         {
             int c;
             if (d.TryGetValue(item, out c))
                 d[item] = c + 1;
-            else 
+            else
                 d.Add(item, 1);
         }
 
