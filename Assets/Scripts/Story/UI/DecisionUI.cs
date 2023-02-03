@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,11 +15,19 @@ public class DecisionUI : MonoBehaviour
 
     public Decision Decision { get; private set; }
 
+    public event Action<Decision> OnChosen;
+
     public void SetDecision(Decision decision)
     {
         Decision = decision;
         image.sprite = decision.Image;
         titleUI.text = decision.Title;
     }
+
+    public void Choose()
+    {
+        OnChosen?.Invoke(Decision);
+    }
+
 
 }

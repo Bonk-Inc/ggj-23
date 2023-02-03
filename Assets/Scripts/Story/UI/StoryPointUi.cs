@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +25,8 @@ public class StoryPointUi : MonoBehaviour
     [SerializeField]
     private StoryPoint storyPoint;
 
+    public event Action<Decision> OnDecicionMade;
+
     public void SetStoryPoint(StoryPoint storyPoint)
     {
         this.storyPoint = storyPoint;
@@ -35,6 +38,10 @@ public class StoryPointUi : MonoBehaviour
         foreach (var decision in storyPoint.Decisions)
         {
             var card = Instantiate(decisionPrefab);
+            card.OnChosen += (decision) =>
+            {
+                OnDecicionMade?.Invoke(decision);
+            };
             card.SetDecision(decision);
             card.transform.SetParent(decisionTransform, false);
         }
