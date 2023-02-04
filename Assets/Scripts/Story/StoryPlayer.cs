@@ -22,7 +22,7 @@ public class StoryPlayer : MonoBehaviour
     [SerializeField]
     private List<GamePoint> generalRandomPoints;
 
-    private List<GamePoint> generalUnlockedPoints;
+    private List<GamePoint> generalUnlockedPoints = new();
 
     [SerializeField]
     private List<AreaStoryPoints> pointsPerArea;
@@ -58,6 +58,18 @@ public class StoryPlayer : MonoBehaviour
         else
         {
             pointsPerArea.Find((asp) => asp.Area == area)?.UnlockedPoints.Add(gamepoint);
+        }
+    }
+
+    public bool HasUnlocked(StoryArea area, GamePoint gamepoint)
+    {
+        if (area == StoryArea.None)
+        {
+            return generalUnlockedPoints.Contains(gamepoint);
+        }
+        else
+        {
+            return pointsPerArea.Find((asp) => asp.Area == area)?.UnlockedPoints.Contains(gamepoint) ?? true;
         }
     }
 
@@ -128,7 +140,7 @@ public class StoryPlayer : MonoBehaviour
         [field: SerializeField]
         public List<GamePoint> Gamepoints { get; private set; }
 
-        public List<GamePoint> UnlockedPoints { get; private set; }
+        public List<GamePoint> UnlockedPoints { get; private set; } = new();
 
         public List<GamePoint> GetAllPoints()
         {

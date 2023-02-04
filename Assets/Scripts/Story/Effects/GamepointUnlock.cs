@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Gamepoint unlock", menuName = "story/effects/point unlock")]
 public class GamepointUnlock : DecisionEffect
 {
 

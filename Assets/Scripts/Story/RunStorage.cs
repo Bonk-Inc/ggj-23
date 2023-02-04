@@ -8,7 +8,7 @@ public class RunStorage : MonoBehaviour
     [SerializeField]
     private StoryPlayer storyPlayer;
 
-    private List<(StoryArea, GamePoint)> UnlockedList;
+    private List<(StoryArea, GamePoint)> UnlockedList = new List<(StoryArea, GamePoint)>();
 
 
     public static RunStorage Instance { get; private set; }
@@ -28,6 +28,11 @@ public class RunStorage : MonoBehaviour
 
     public void Unlock(StoryArea area, GamePoint gamepoint)
     {
+        if (storyPlayer.HasUnlocked(area, gamepoint))
+        {
+            return;
+        }
+
         UnlockedList.Add((area, gamepoint));
         storyPlayer.UnlockPoint(area, gamepoint);
     }

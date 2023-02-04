@@ -311,6 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 909785176}
   - component: {fileID: 909785175}
+  - component: {fileID: 909785177}
   m_Layer: 0
   m_Name: Story
   m_TagString: Untagged
@@ -331,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyPointUi: {fileID: 924321660}
-  runStorage: {fileID: 0}
+  runStorage: {fileID: 909785177}
   initialStorypoint: {fileID: 11400000, guid: 0f0a2edc69ac44240ab5b1b7412e94bf, type: 2}
   combat: {fileID: 1541882687}
   generalRandomPoints:
@@ -340,6 +341,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ca269ce238704144e8c76c48e2b68332, type: 2}
   - {fileID: 11400000, guid: 5d9abfed4b6b0b4469d3ce2c2eda9f9c, type: 2}
   - {fileID: 11400000, guid: 9e4e10d539853be4e9022a3dbc809ada, type: 2}
+  - {fileID: 11400000, guid: b9184184d0f610e4b9e44d91a42c3a0b, type: 2}
   pointsPerArea:
   - <Area>k__BackingField: 1
     <Gamepoints>k__BackingField:
@@ -366,6 +368,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &909785177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909785174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef975b325c5e0314f85997f7e4a04841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storyPlayer: {fileID: 909785175}
 --- !u!224 &924321657 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7759592617469253716, guid: 1a8da96a987f8344b97c5e551f2d313b, type: 3}
