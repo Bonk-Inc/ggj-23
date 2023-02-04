@@ -18,5 +18,7 @@ public class ItemData : ScriptableObject
     [field: SerializeField]
     public int Max { get; private set; }
 
+    [field: SerializeField]
+    public bool IsTool { get; private set; } = false;
 
 }
