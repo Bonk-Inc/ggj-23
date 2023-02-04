@@ -1,30 +1,25 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Combat : MonoBehaviour
 {
+    [SerializeField] private Enemy enemyPrefab;
 
-    [SerializeField]
-    private Enemy enemyPrefab;
-
-    [SerializeField]
-    private Transform enemyCardParent;
+    [SerializeField] private Transform enemyCardParent;
 
     private Queue<EnemyData> enemyQueue;
 
     private Action<Outcome> onCombatFinished;
 
     private bool running = false;
+    [SerializeField] private Player player;
 
-    [SerializeField]
-    private GameObject combatParent;
+    [SerializeField] private GameObject combatParent;
 
     public Enemy currentEnemy;
-
-    [SerializeField]
-    private CombatTurnManager combatTurnManager;
 
     public void StartCombat(List<EnemyData> enemies, Action<Outcome> OnCombatFinished = null)
     {
@@ -32,12 +27,40 @@ public class Combat : MonoBehaviour
         this.enemyQueue = enemies.ToQueue();
         running = true;
         combatParent.SetActive(true);
-        combatTurnManager.StartTurns();
         SetNextEnemy();
+        int totalDamage = GetTotalDamage();
+        while (true)
+        {
+            //TODO should be damage from player.
+            enemyPrefab.Hit(50);
+
+            // not running when all enemies are ded.
+            if (!running)
+            {
+                return;
+            }
+
+            totalDamage = GetTotalDamage();
+            player.Health.Decrease(totalDamage);
+
+            if (player.Health.CurrentValue <= 0)
+            {
+                Debug.Log("Ah ohw, no helf left.\nyou lose");
+                CombatEnded(Outcome.Lose);
+                return;
+            }
+        }
     }
+
+    private int GetTotalDamage()
+    {
+        return enemyQueue.Sum(data => data.Damage);
+    }
+
 
     private void OnEnemyDied()
     {
+        enemyQueue.Dequeue();
         if (enemyQueue.Count == 0)
         {
             CombatEnded(Outcome.Win);
@@ -50,13 +73,13 @@ public class Combat : MonoBehaviour
 
     private void SetNextEnemy()
     {
-        var next = enemyQueue.Dequeue();
+        var next = enemyQueue.Peek();
         //TODO this should spawn the enemy later, but for now it'll just use one in the scene so spawing and such is not nessecary
         enemyPrefab.SetEnemyData(next);
         enemyPrefab.OnDeath += OnEnemyDied;
         currentEnemy = enemyPrefab;
-        combatTurnManager.enemyTurn = enemyPrefab.Turnhandler;
     }
+
 
     private void CombatEnded(Outcome outcome)
     {
@@ -69,7 +92,6 @@ public class Combat : MonoBehaviour
         enemyQueue = null;
         currentEnemy = null;
         combatParent.SetActive(false);
-        combatTurnManager.StopTurns();
     }
 
     public void Flee()
@@ -83,5 +105,4 @@ public class Combat : MonoBehaviour
         Lose,
         Flee
     }
-
 }

@@ -25,14 +25,6 @@ public class Enemy : MonoBehaviour
 
     public EnemyData Data => enemyData;
 
-    [field: SerializeField]
-    public TurnHandler Turnhandler { get; private set; }
-
-    private void Awake()
-    {
-        Turnhandler = GetComponent<TurnHandler>();
-    }
-
     public void SetEnemyData(EnemyData data)
     {
         OnDeath = null;
