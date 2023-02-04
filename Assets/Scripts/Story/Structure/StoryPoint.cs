@@ -16,6 +16,12 @@ public class StoryPoint : GamePoint
     public Sprite Background { get; private set; }
 
     [field: SerializeField]
+    public Color BackgroundColor { get; private set; } = Color.white;
+
+    [field: SerializeField]
+    public Color TextColor { get; private set; } = Color.white;
+
+    [field: SerializeField]
     public AudioClip Music { get; private set; }
 
     [field: SerializeField]

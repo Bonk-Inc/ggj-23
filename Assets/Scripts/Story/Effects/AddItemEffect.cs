@@ -18,6 +18,6 @@ public class AddItemEffect : DecisionEffect
         var addAmount = effectParams?.intValue ?? amount;
         var addItem = effectParams?.itemType ?? itemType;
 
-        PlayerInventory.Instance.InsertItem(itemType, amount);
+        PlayerInventory.Instance.InsertItem(addItem, amount);
     }
 }

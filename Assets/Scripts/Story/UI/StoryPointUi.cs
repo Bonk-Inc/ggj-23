@@ -41,6 +41,9 @@ public class StoryPointUi : MonoBehaviour
         titleUI.text = storyPoint.Title;
         storyUI.text = storyPoint.Story;
         background.sprite = storyPoint.Background;
+        background.color = storyPoint.BackgroundColor;
+        titleUI.color = storyPoint.TextColor;
+        storyUI.color = storyPoint.TextColor;
         clock.gameObject.SetActive(false);
 
         if (storyPoint.DecisionTime > 0 && storyPoint.DefaultDecision == null)

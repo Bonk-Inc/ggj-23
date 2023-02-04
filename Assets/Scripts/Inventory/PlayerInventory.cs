@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,9 @@ public class PlayerInventory : MonoBehaviour
 
     private static PlayerInventory instance;
     public static PlayerInventory Instance => instance;
+
+
+    public event Action OnToolsChanged;
 
     private void Awake()
     {
@@ -53,7 +57,6 @@ public class PlayerInventory : MonoBehaviour
         {
             throw new System.Exception($"Item type does not exist. Make sure there is a ItemData asset linked to type {itemType} in the Resources/Items folder");
         }
-        Debug.Log($"adding {amount} to item {itemType}");
         SetItemTypeAmount(itemType, items[itemType].amount + amount);
     }
 
@@ -63,15 +66,19 @@ public class PlayerInventory : MonoBehaviour
         {
             throw new System.Exception($"Item type does not exist. Make sure there is a ItemData asset linked to type {itemType} in the Resources/Items folder");
         }
-        Debug.Log($"removing {amount} to item {itemType}");
+
         SetItemTypeAmount(itemType, items[itemType].amount - amount);
     }
 
     private void SetItemTypeAmount(ItemType itemType, int value = 1)
     {
         var max = items[itemType].data.Max > 0 ? items[itemType].data.Max : int.MaxValue;
-        Debug.Log($"new value for {itemType} will be {Mathf.Clamp(value, 0, max)}");
         items[itemType].amount = Mathf.Clamp(value, 0, max);
+
+        if (items[itemType].data.IsTool)
+        {
+            OnToolsChanged?.Invoke();
+        }
     }
 
     public List<Item> GetItemList()
@@ -79,6 +86,15 @@ public class PlayerInventory : MonoBehaviour
         return items
         .Values
         .Where((item) => item.amount > 0)
+        .ToList();
+    }
+
+    public List<Item> GetToolsList()
+    {
+        return items
+        .Values
+        .Where((item) => item.amount > 0)
+        .Where((item) => item.data.IsTool)
         .ToList();
     }
 
