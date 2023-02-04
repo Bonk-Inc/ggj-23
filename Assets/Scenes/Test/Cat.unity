@@ -1126,6 +1126,7 @@ MonoBehaviour:
   gameoverPoint: {fileID: 0}
   initialStorypoint: {fileID: 11400000, guid: d6992ea4f12f381409a1a501d615e8dc, type: 2}
   combat: {fileID: 1541882687}
+  playerStats: {fileID: 1934438664}
   generalRandomPoints:
   - {fileID: 11400000, guid: 0f0a2edc69ac44240ab5b1b7412e94bf, type: 2}
   - {fileID: 11400000, guid: cd219775440ac094d90e515c60d62a30, type: 2}

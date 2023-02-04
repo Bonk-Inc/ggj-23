@@ -22,6 +22,9 @@ public class StoryPlayer : MonoBehaviour
     private Combat combat;
 
     [SerializeField]
+    private Player playerStats;
+
+    [SerializeField]
     private List<GamePoint> generalRandomPoints;
 
     private List<GamePoint> generalUnlockedPoints = new();
@@ -39,6 +42,7 @@ public class StoryPlayer : MonoBehaviour
 
     public void StartStory()
     {
+        playerStats.ResetStats();
         runStorage.ReunlockAll();
         storyPointUi.OnDecicionMade += OnDecisionMade;
         SetNextGamepoint(initialStorypoint);
@@ -82,7 +86,8 @@ public class StoryPlayer : MonoBehaviour
             effect.effect.DoEffect(effect.OverrideParams ? effect.Params : null);
         }
 
-        var nextPoint = decision.Next ?? GetRandomPoint();
+        var isDead = playerStats.Health.CurrentValue <= playerStats.Health.MinValue;
+        var nextPoint = isDead ? gameoverPoint : decision.Next ?? GetRandomPoint();
         if (decision.ExplainingPoint.Title != string.Empty)
         {
             storyPointUi.OnExaplainerClosed += () =>
