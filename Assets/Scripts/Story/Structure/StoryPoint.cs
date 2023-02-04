@@ -21,4 +21,10 @@ public class StoryPoint : GamePoint
     [field: SerializeField]
     public List<Decision> Decisions { get; private set; }
 
+    [field: SerializeField]
+    public float DecisionTime { get; private set; } = -1;
+
+    [field: SerializeField]
+    public Decision DefaultDecision { get; private set; } = null;
+
 }

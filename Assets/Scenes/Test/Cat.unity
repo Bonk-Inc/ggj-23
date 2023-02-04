@@ -345,6 +345,7 @@ MonoBehaviour:
     <Gamepoints>k__BackingField:
     - {fileID: 11400000, guid: 90366c7c8019d2648ae58cf6236b3f0e, type: 2}
     - {fileID: 11400000, guid: 06c745f2d65e54942be8cf376dcaf2a3, type: 2}
+  <Area>k__BackingField: 0
 --- !u!4 &909785176
 Transform:
   m_ObjectHideFlags: 0
@@ -486,7 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1934438664}
-  story: {fileID: 0}
+  story: {fileID: 909785175}
 --- !u!114 &1934438664
 MonoBehaviour:
   m_ObjectHideFlags: 0

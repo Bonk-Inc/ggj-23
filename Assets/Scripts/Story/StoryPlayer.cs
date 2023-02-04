@@ -22,7 +22,7 @@ public class StoryPlayer : MonoBehaviour
     [SerializeField]
     private List<AreaStoryPoints> pointsPerArea;
 
-    [SerializeField]
+    [field: SerializeField]
     public StoryArea Area { get; set; }
 
     private void Start()
