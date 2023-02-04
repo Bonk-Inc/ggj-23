@@ -18,6 +18,10 @@ public class Decision : ScriptableObject
     [field: SerializeField]
     public GamePoint Next { get; private set; }
 
+    [field: SerializeField]
+    public Explainer ExplainingPoint { get; private set; }
+
+
     [System.Serializable]
     public class InnerDecisionEffect
     {
@@ -33,4 +37,17 @@ public class Decision : ScriptableObject
 
     }
 
+
+
+}
+
+
+[System.Serializable]
+public class Explainer
+{
+    [field: SerializeField]
+    public string Title { get; private set; } = string.Empty;
+
+    [field: SerializeField]
+    public string Explaination { get; private set; } = string.Empty;
 }

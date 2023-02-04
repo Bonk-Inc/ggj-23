@@ -336,6 +336,7 @@ MonoBehaviour:
   generalRandomPoints:
   - {fileID: 11400000, guid: 0f0a2edc69ac44240ab5b1b7412e94bf, type: 2}
   - {fileID: 11400000, guid: cd219775440ac094d90e515c60d62a30, type: 2}
+  - {fileID: 11400000, guid: ca269ce238704144e8c76c48e2b68332, type: 2}
   pointsPerArea:
   - <Area>k__BackingField: 1
     <Gamepoints>k__BackingField:
@@ -631,6 +632,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2052369854}
     m_Modifications:
+    - target: {fileID: 205226155, guid: 1a8da96a987f8344b97c5e551f2d313b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7759592617469253716, guid: 1a8da96a987f8344b97c5e551f2d313b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -32,6 +32,9 @@ public class StoryPointUi : MonoBehaviour
 
     private Coroutine timerRoutine = null;
 
+    [SerializeField]
+    private Transform explainationNextButton;
+
     public void SetStoryPoint(StoryPoint storyPoint)
     {
         this.storyPoint = storyPoint;
@@ -62,6 +65,25 @@ public class StoryPointUi : MonoBehaviour
             card.transform.SetParent(decisionTransform, false);
         }
 
+    }
+
+    public event Action OnExaplainerClosed;
+    public void SetExplainer(Explainer storyPoint)
+    {
+        decisionTransform.gameObject.SetActive(false);
+        explainationNextButton.gameObject.SetActive(true);
+        titleUI.text = storyPoint.Title;
+        storyUI.text = storyPoint.Explaination;
+    }
+
+    public void FinishExplaination()
+    {
+        decisionTransform.gameObject.SetActive(true);
+        explainationNextButton.gameObject.SetActive(false);
+        titleUI.text = String.Empty;
+        storyUI.text = String.Empty;
+        OnExaplainerClosed.Invoke();
+        OnExaplainerClosed = null;
     }
 
     private void MakeDecision(Decision decision)

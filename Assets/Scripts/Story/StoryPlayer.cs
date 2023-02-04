@@ -44,7 +44,19 @@ public class StoryPlayer : MonoBehaviour
         }
 
         var nextPoint = decision.Next ?? GetRandomPoint();
-        SetNextGamepoint(nextPoint);
+        if (decision.ExplainingPoint.Title != string.Empty)
+        {
+            storyPointUi.OnExaplainerClosed += () =>
+            {
+                SetNextGamepoint(nextPoint);
+            };
+            storyPointUi.SetExplainer(decision.ExplainingPoint);
+        }
+        else
+        {
+            SetNextGamepoint(nextPoint);
+        }
+
     }
 
     private void SetNextGamepoint(GamePoint gamepoint)
