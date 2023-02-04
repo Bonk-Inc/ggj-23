@@ -22,6 +22,9 @@ public class StoryPlayer : MonoBehaviour
     private Combat combat;
 
     [SerializeField]
+    private Player playerStats;
+
+    [SerializeField]
     private List<GamePoint> generalRandomPoints;
 
     private List<GamePoint> generalUnlockedPoints = new();
@@ -39,6 +42,7 @@ public class StoryPlayer : MonoBehaviour
 
     public void StartStory()
     {
+        playerStats.ResetStats();
         runStorage.ReunlockAll();
         storyPointUi.OnDecicionMade += OnDecisionMade;
         SetNextGamepoint(initialStorypoint);
