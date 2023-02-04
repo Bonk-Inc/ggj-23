@@ -8,6 +8,8 @@ public enum StoryArea
 
     Forest,
     Cave,
-    Fortress,
-    AlbertHeijn
+    Mushroom,
+    Vines,
+    Church,
+    Mountains
 }

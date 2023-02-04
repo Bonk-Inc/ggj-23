@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42683cf721010d46884de52e36da3ef, type: 3}
+  m_Name: Cave - Three roads
+  m_EditorClassIdentifier: 
+  <Title>k__BackingField: A fork in the road
+  <Story>k__BackingField: Choose your path
+  <Background>k__BackingField: {fileID: 21300000, guid: a29c66f026634164b945f9992d1860a6, type: 3}
+  <Music>k__BackingField: {fileID: 0}
+  <Decisions>k__BackingField:
+  - {fileID: 11400000, guid: 13853af653c9c8548b4be70314f9d4c7, type: 2}
+  - {fileID: 11400000, guid: f61ae9ed50a54ef47b6037718d97be7e, type: 2}
+  - {fileID: 11400000, guid: 83c94a702eae34440a92621c9971b6cd, type: 2}
+  <DecisionTime>k__BackingField: -1
+  <DefaultDecision>k__BackingField: {fileID: 0}
