@@ -4,5 +4,20 @@ using UnityEngine;
 
 public abstract class DecisionGuard : ScriptableObject
 {
-    public abstract bool CheckGuardCondition();
+
+    [SerializeField]
+    private bool reverseCondigion;
+
+    public bool CheckGuardCondition()
+    {
+        if (reverseCondigion)
+        {
+            return !CheckCondition();
+        }
+        else
+        {
+            return CheckCondition();
+        }
+    }
+    public abstract bool CheckCondition();
 }

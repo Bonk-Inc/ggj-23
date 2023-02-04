@@ -11,7 +11,7 @@ public class ItemGuardCondition : DecisionGuard
     [SerializeField]
     private int amount = 1;
 
-    public override bool CheckGuardCondition()
+    public override bool CheckCondition()
     {
         return PlayerInventory.Instance.GetItemCount(item) >= amount;
     }
