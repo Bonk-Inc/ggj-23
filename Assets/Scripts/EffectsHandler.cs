@@ -15,8 +15,8 @@ public class EffectsHandler : MonoBehaviour
     private void Awake()
     {
         effects = new() {
-            { Effect.HealthChange, (param) => { player.Health -= param.intValue; } },
-            { Effect.StatminaChange, (param) => { player.Stamina -= param.intValue; } },
+            { Effect.HealthChange, (param) => { player.Health.Decrease(param.intValue); } },
+            { Effect.StatminaChange, (param) => { player.Stamina.Decrease(param.intValue); } },
         };
     }
 
