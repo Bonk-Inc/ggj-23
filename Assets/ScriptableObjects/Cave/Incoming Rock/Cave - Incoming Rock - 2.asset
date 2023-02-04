@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f42683cf721010d46884de52e36da3ef, type: 3}
-  m_Name: Game Over
+  m_Name: Cave - Incoming Rock - 2
   m_EditorClassIdentifier: 
-  <Title>k__BackingField: Rest well
-  <Story>k__BackingField: Our young hero is lost within the roots of the cave
+  <Title>k__BackingField: Ruuuuun!
+  <Story>k__BackingField: Which way do you go?!?
   <Background>k__BackingField: {fileID: 0}
-  <BackgroundColor>k__BackingField: {r: 0.1509434, g: 0.14154504, b: 0.14154504, a: 1}
+  <BackgroundColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
   <TextColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
   <Music>k__BackingField: {fileID: 0}
   <Decisions>k__BackingField:
-  - {fileID: 11400000, guid: 0e736d3930173a74d9885709cdb5fb05, type: 2}
-  <DecisionTime>k__BackingField: -1
-  <DefaultDecision>k__BackingField: {fileID: 0}
+  - {fileID: 11400000, guid: 2bc3b1e63f67e5f4f9e7e18c08ec75c4, type: 2}
+  - {fileID: 11400000, guid: 2bc3b1e63f67e5f4f9e7e18c08ec75c4, type: 2}
+  <DecisionTime>k__BackingField: 10
+  <DefaultDecision>k__BackingField: {fileID: 11400000, guid: 3792fe8e7b1ad0545a6816f894563276, type: 2}

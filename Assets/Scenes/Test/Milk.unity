@@ -2813,6 +2813,26 @@ PrefabInstance:
       propertyPath: combat
       value: 
       objectReference: {fileID: 651771592}
+    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
+      propertyPath: pointsPerArea.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
+      propertyPath: pointsPerArea.Array.data[4].<Area>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
+      propertyPath: pointsPerArea.Array.data[4].<Gamepoints>k__BackingField.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
+      propertyPath: pointsPerArea.Array.data[4].<Gamepoints>k__BackingField.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 90366c7c8019d2648ae58cf6236b3f0e, type: 2}
+    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
+      propertyPath: pointsPerArea.Array.data[4].<Gamepoints>k__BackingField.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 06c745f2d65e54942be8cf376dcaf2a3, type: 2}
     - target: {fileID: 8136918700103721515, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
       propertyPath: m_Name
       value: Story
