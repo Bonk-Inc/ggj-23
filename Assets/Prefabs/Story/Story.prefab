@@ -134,7 +134,7 @@ Transform:
   m_Children:
   - {fileID: 8136918698822006723}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8136918700103721514
 MonoBehaviour:
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyPointUi: {fileID: 2146560270650813036}
   runStorage: {fileID: 8136918700103721508}
-  gameoverPoint: {fileID: 0}
+  gameoverPoint: {fileID: 11400000, guid: dd8251863fba8074b95cae312e2647f9, type: 2}
   initialStorypoint: {fileID: 11400000, guid: 0d5f24e5d1b56cc4692e8a73c9195744, type: 2}
   combat: {fileID: 0}
   generalRandomPoints: []
@@ -158,11 +158,18 @@ MonoBehaviour:
   - <Area>k__BackingField: 1
     <Gamepoints>k__BackingField:
     - {fileID: 11400000, guid: ac0f7e2c5d6985f418389214020b0cc9, type: 2}
+    - {fileID: 11400000, guid: 1971d01db1bdfd04fa16478ca3ede07a, type: 2}
+    - {fileID: 11400000, guid: da877c3f535c8b2458c1a0d2b5a31e77, type: 2}
+    - {fileID: 11400000, guid: 581c3729e4db802449cfbe1e35ba1f42, type: 2}
   - <Area>k__BackingField: 0
     <Gamepoints>k__BackingField:
     - {fileID: 11400000, guid: 90366c7c8019d2648ae58cf6236b3f0e, type: 2}
     - {fileID: 11400000, guid: 06c745f2d65e54942be8cf376dcaf2a3, type: 2}
   - <Area>k__BackingField: 2
+    <Gamepoints>k__BackingField:
+    - {fileID: 11400000, guid: 90366c7c8019d2648ae58cf6236b3f0e, type: 2}
+    - {fileID: 11400000, guid: 06c745f2d65e54942be8cf376dcaf2a3, type: 2}
+  - <Area>k__BackingField: 3
     <Gamepoints>k__BackingField:
     - {fileID: 11400000, guid: 90366c7c8019d2648ae58cf6236b3f0e, type: 2}
     - {fileID: 11400000, guid: 06c745f2d65e54942be8cf376dcaf2a3, type: 2}

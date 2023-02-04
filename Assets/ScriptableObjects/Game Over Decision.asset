@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5cc9eb0e4b2a4845bef18553f5ad44e, type: 3}
-  m_Name: Cave - Incoming Rock - Towards the rock
+  m_Name: Game Over Decision
   m_EditorClassIdentifier: 
-  <Title>k__BackingField: Run to the rock!
+  <Title>k__BackingField: F
   <Image>k__BackingField: {fileID: 0}
   <Guards>k__BackingField: []
   <Effects>k__BackingField: []
-  <Next>k__BackingField: {fileID: 11400000, guid: a39e76e44a8629a40981edb9b9b13d4c, type: 2}
+  <Next>k__BackingField: {fileID: 11400000, guid: 0d5f24e5d1b56cc4692e8a73c9195744, type: 2}
   <ExplainingPoint>k__BackingField:
-    <Title>k__BackingField: Come get me, you rock!
-    <Explaination>k__BackingField: You bravely run towards the rock!
+    <Title>k__BackingField: 
+    <Explaination>k__BackingField: 
