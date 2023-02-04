@@ -33,4 +33,7 @@ public class StoryPoint : GamePoint
     [field: SerializeField]
     public Decision DefaultDecision { get; private set; } = null;
 
+    [field: SerializeField]
+    public bool AddStoreOptions { get; private set; } = false;
+
 }

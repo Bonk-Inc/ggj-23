@@ -1124,22 +1124,18 @@ MonoBehaviour:
   storyPointUi: {fileID: 924321660}
   runStorage: {fileID: 909785177}
   gameoverPoint: {fileID: 0}
-  initialStorypoint: {fileID: 11400000, guid: d6992ea4f12f381409a1a501d615e8dc, type: 2}
+  initialStorypoint: {fileID: 11400000, guid: 72fbfb8696d7f664692e0cf713d1818b, type: 2}
   combat: {fileID: 1541882687}
   playerStats: {fileID: 1934438664}
   generalRandomPoints:
-  - {fileID: 11400000, guid: 0f0a2edc69ac44240ab5b1b7412e94bf, type: 2}
-  - {fileID: 11400000, guid: cd219775440ac094d90e515c60d62a30, type: 2}
-  - {fileID: 11400000, guid: ca269ce238704144e8c76c48e2b68332, type: 2}
-  - {fileID: 11400000, guid: 5d9abfed4b6b0b4469d3ce2c2eda9f9c, type: 2}
   - {fileID: 11400000, guid: 9e4e10d539853be4e9022a3dbc809ada, type: 2}
-  - {fileID: 11400000, guid: b9184184d0f610e4b9e44d91a42c3a0b, type: 2}
+  - {fileID: 11400000, guid: 72fbfb8696d7f664692e0cf713d1818b, type: 2}
   pointsPerArea:
-  - <Area>k__BackingField: 1
+  - <Area>k__BackingField: 4
     <Gamepoints>k__BackingField:
     - {fileID: 11400000, guid: 2d57cb73581e7e6458f443bcc6b1e79c, type: 2}
     - {fileID: 11400000, guid: 58f8a6d5037332f469fb6bb6887e9dda, type: 2}
-  - <Area>k__BackingField: 0
+  - <Area>k__BackingField: 5
     <Gamepoints>k__BackingField:
     - {fileID: 11400000, guid: 90366c7c8019d2648ae58cf6236b3f0e, type: 2}
     - {fileID: 11400000, guid: 06c745f2d65e54942be8cf376dcaf2a3, type: 2}
@@ -2006,6 +2002,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &2086377671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2086377673}
+  - component: {fileID: 2086377672}
+  m_Layer: 0
+  m_Name: krusty krab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2086377672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086377671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17b0a02344c2ac41a166640665cc105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeItems:
+  - <Item>k__BackingField: {fileID: 11400000, guid: d6bb7bf175cea4c4bbaa98cbd1add12a, type: 2}
+    <Price>k__BackingField: 5
+    <Stock>k__BackingField: 1
+  - <Item>k__BackingField: {fileID: 11400000, guid: 41fec9efda33aad479cdf3949ab3b099, type: 2}
+    <Price>k__BackingField: 5
+    <Stock>k__BackingField: -1
+  - <Item>k__BackingField: {fileID: 11400000, guid: 7902016c1fe5e9347b64e72bf85e7023, type: 2}
+    <Price>k__BackingField: 5
+    <Stock>k__BackingField: 1
+  areaItems:
+  - <Area>k__BackingField: 0
+    <Item>k__BackingField:
+      <Item>k__BackingField: {fileID: 11400000, guid: a80b5e15d2f1a774693918dbc2fa0ffb, type: 2}
+      <Price>k__BackingField: 3
+      <Stock>k__BackingField: 1
+  itemsPerShop: 2
+--- !u!4 &2086377673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086377671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2122761756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,6 +2166,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 471089178468970300, guid: 1a8da96a987f8344b97c5e551f2d313b, type: 3}
+      propertyPath: store
+      value: 
+      objectReference: {fileID: 2086377672}
     - target: {fileID: 7759592617469253716, guid: 1a8da96a987f8344b97c5e551f2d313b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
