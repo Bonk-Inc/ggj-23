@@ -26,6 +26,12 @@ public class Player : MonoBehaviour
             throw new System.Exception("Multiple players not allowed");
         }
     }
+    
+    public void ResetStats()
+    {
+        Health.Reset();
+        Stamina.Reset();
+    }
 
 }
 
@@ -45,7 +51,7 @@ public class PlayerStat
 
     public PlayerStat()
     {
-        CurrentValue = MaxValue;
+        Reset();
     }
 
     public void Increase(int amount)
@@ -56,6 +62,11 @@ public class PlayerStat
     public void Decrease(int amount)
     {
         SetValue(CurrentValue - amount);
+    }
+
+    public void Reset()
+    {
+        CurrentValue = MaxValue;
     }
 
     public void SetValue(int value)
