@@ -21,12 +21,18 @@ public class Combat : MonoBehaviour
     [SerializeField]
     private GameObject combatParent;
 
+    public Enemy currentEnemy;
+
+    [SerializeField]
+    private CombatTurnManager combatTurnManager;
+
     public void StartCombat(List<EnemyData> enemies, Action<Outcome> OnCombatFinished = null)
     {
         onCombatFinished = OnCombatFinished;
         this.enemyQueue = enemies.ToQueue();
         running = true;
         combatParent.SetActive(true);
+        combatTurnManager.StartTurns();
         SetNextEnemy();
     }
 
@@ -48,6 +54,8 @@ public class Combat : MonoBehaviour
         //TODO this should spawn the enemy later, but for now it'll just use one in the scene so spawing and such is not nessecary
         enemyPrefab.SetEnemyData(next);
         enemyPrefab.OnDeath += OnEnemyDied;
+        currentEnemy = enemyPrefab;
+        combatTurnManager.enemyTurn = enemyPrefab.Turnhandler;
     }
 
     private void CombatEnded(Outcome outcome)
@@ -59,7 +67,9 @@ public class Combat : MonoBehaviour
         onCombatFinished?.Invoke(outcome);
         onCombatFinished = null;
         enemyQueue = null;
+        currentEnemy = null;
         combatParent.SetActive(false);
+        combatTurnManager.StopTurns();
     }
 
     public void Flee()

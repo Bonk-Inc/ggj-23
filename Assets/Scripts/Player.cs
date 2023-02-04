@@ -27,9 +27,14 @@ public class PlayerStat
     [field: SerializeField]
     public int MaxValue { get; private set; } = 100;
 
-    public int CurrentValue { get; private set; } = 0;
+    public int CurrentValue { get; private set; }
 
     public event Action<StatChangeArgs> OnChange;
+
+    public PlayerStat()
+    {
+        CurrentValue = MaxValue;
+    }
 
     public void Increase(int amount)
     {

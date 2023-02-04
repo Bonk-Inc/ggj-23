@@ -818,10 +818,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1345506403}
-        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
-        m_MethodName: Hit
-        m_Mode: 3
+      - m_Target: {fileID: 1541882688}
+        m_TargetAssemblyTypeName: PlayerTurnHandler, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1015,6 +1015,7 @@ GameObject:
   - component: {fileID: 1345506405}
   - component: {fileID: 1345506404}
   - component: {fileID: 1345506403}
+  - component: {fileID: 1345506406}
   m_Layer: 5
   m_Name: Enemy Card
   m_TagString: Untagged
@@ -1061,6 +1062,7 @@ MonoBehaviour:
   nameUi: {fileID: 246837929}
   image: {fileID: 636332003}
   healthbar: {fileID: 1010266613}
+  <Turnhandler>k__BackingField: {fileID: 0}
 --- !u!114 &1345506404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1099,6 +1101,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345506401}
   m_CullTransparentMesh: 1
+--- !u!114 &1345506406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345506401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d52c2ccf48af43c49bafe1a727d2bcb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1934438664}
+  enemy: {fileID: 1345506403}
 --- !u!1 &1407825653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,6 +1467,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1541882686}
   - component: {fileID: 1541882687}
+  - component: {fileID: 1541882689}
+  - component: {fileID: 1541882688}
   m_Layer: 0
   m_Name: Combat
   m_TagString: Untagged
@@ -1489,6 +1507,40 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1345506403}
   enemyCardParent: {fileID: 306379244}
   combatParent: {fileID: 1541882685}
+  currentEnemy: {fileID: 0}
+  combatTurnManager: {fileID: 1541882689}
+--- !u!114 &1541882688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541882685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f9a39eedd20bbf4dba20caee2f2c878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combat: {fileID: 1541882687}
+  damage: 40
+  actionButtons:
+  - {fileID: 1260585424}
+  - {fileID: 2000653518}
+--- !u!114 &1541882689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541882685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8ccf5c593e18744a56f9db83994ba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combat: {fileID: 1541882687}
+  <PlayerTurn>k__BackingField: {fileID: 1541882688}
+  enemyTurn: {fileID: 0}
 --- !u!1 &1588717533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,8 +1687,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5126fe51e9e44a40a9362143d6b4aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Health>k__BackingField: 2147483647
-  <Stamina>k__BackingField: 0
+  <Health>k__BackingField:
+    <MinValue>k__BackingField: 0
+    <MaxValue>k__BackingField: 100
+  <Stamina>k__BackingField:
+    <MinValue>k__BackingField: 0
+    <MaxValue>k__BackingField: 100
 --- !u!4 &1934438665
 Transform:
   m_ObjectHideFlags: 0
@@ -1736,8 +1792,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1541882687}
-        m_TargetAssemblyTypeName: Combat, Assembly-CSharp
+      - m_Target: {fileID: 1541882688}
+        m_TargetAssemblyTypeName: PlayerTurnHandler, Assembly-CSharp
         m_MethodName: Flee
         m_Mode: 1
         m_Arguments:
