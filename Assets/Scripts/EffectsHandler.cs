@@ -10,6 +10,9 @@ public class EffectsHandler : MonoBehaviour
     [SerializeField]
     private Player player;
 
+    [SerializeField]
+    private StoryPlayer story;
+
     private static Dictionary<Effect, Action<EffectParams>> effects;
 
     private void Awake()
@@ -17,6 +20,7 @@ public class EffectsHandler : MonoBehaviour
         effects = new() {
             { Effect.HealthChange, (param) => { player.Health.Decrease(param.intValue); } },
             { Effect.StatminaChange, (param) => { player.Stamina.Decrease(param.intValue); } },
+            { Effect.ChangeArea, (param) => { story.Area = param.areaValue; } },
         };
     }
 

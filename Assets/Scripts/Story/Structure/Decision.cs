@@ -13,16 +13,24 @@ public class Decision : ScriptableObject
     public Sprite Image { get; private set; }
 
     [field: SerializeField]
-    public List<DecisionEffect> Effects { get; private set; }
-
-    [field: SerializeField]
-    public bool overrideParameters { get; private set; }
-
-    [field: SerializeField]
-    public EffectParams Params { get; private set; }
+    public List<InnerDecisionEffect> Effects { get; private set; }
 
     [field: SerializeField]
     public GamePoint Next { get; private set; }
 
+    [System.Serializable]
+    public class InnerDecisionEffect
+    {
+
+        [field: SerializeField]
+        public bool OverrideParams;
+
+        [field: SerializeField]
+        public EffectParams Params { get; private set; }
+
+        [field: SerializeField]
+        public DecisionEffect effect { get; private set; }
+
+    }
 
 }

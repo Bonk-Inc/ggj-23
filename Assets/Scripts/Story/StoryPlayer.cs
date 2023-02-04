@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class StoryPlayer : MonoBehaviour
@@ -16,7 +17,13 @@ public class StoryPlayer : MonoBehaviour
     private Combat combat;
 
     [SerializeField]
-    private List<GamePoint> possibleRandomPoints;
+    private List<GamePoint> generalRandomPoints;
+
+    [SerializeField]
+    private List<AreaStoryPoints> pointsPerArea;
+
+    [SerializeField]
+    public StoryArea Area { get; set; }
 
     private void Start()
     {
@@ -33,10 +40,10 @@ public class StoryPlayer : MonoBehaviour
     {
         foreach (var effect in decision.Effects)
         {
-            effect.DoEffect(decision.overrideParameters ? decision.Params : null);
+            effect.effect.DoEffect(effect.OverrideParams ? effect.Params : null);
         }
 
-        var nextPoint = decision.Next ?? possibleRandomPoints.GetRandom();
+        var nextPoint = decision.Next ?? GetRandomPoint();
         SetNextGamepoint(nextPoint);
     }
 
@@ -64,8 +71,25 @@ public class StoryPlayer : MonoBehaviour
             Combat.Outcome.Flee => combatpoint.NextFlee,
             Combat.Outcome.Lose => combatpoint.NextLose,
             _ => null
-        } ?? possibleRandomPoints.GetRandom();
+        } ?? GetRandomPoint();
         SetNextGamepoint(nextPoint);
+    }
+
+    private GamePoint GetRandomPoint()
+    {
+        var areapoints = pointsPerArea.Find((areapoints) => areapoints.Area == Area).Gamepoints;
+        return generalRandomPoints.Union(areapoints).ToList().GetRandom();
+    }
+
+    [System.Serializable]
+    private class AreaStoryPoints
+    {
+
+        [field: SerializeField]
+        public StoryArea Area { get; private set; }
+
+        [field: SerializeField]
+        public List<GamePoint> Gamepoints { get; private set; }
     }
 
 }

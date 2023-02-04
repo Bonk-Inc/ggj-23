@@ -5,5 +5,6 @@ using UnityEngine;
 public enum Effect
 {
     HealthChange,
-    StatminaChange
+    StatminaChange,
+    ChangeArea
 }

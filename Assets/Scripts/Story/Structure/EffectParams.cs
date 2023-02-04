@@ -7,4 +7,5 @@ using UnityEngine;
 public class EffectParams
 {
     public int intValue;
+    public StoryArea areaValue = StoryArea.None;
 }
