@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decisionName: Remove Money 10
   itemType: 0
-  amount: 10
+  amount: -10

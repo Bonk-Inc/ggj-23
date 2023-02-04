@@ -4,7 +4,5 @@ using UnityEngine;
 
 public abstract class TurnHandler : MonoBehaviour
 {
-
     public abstract IEnumerator RunTurn();
-
 }

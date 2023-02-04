@@ -104,4 +104,70 @@ public class StoryPlayer : MonoBehaviour
         public List<GamePoint> Gamepoints { get; private set; }
     }
 
+    [ContextMenu("Validate")]
+    private void ResetStorypoint()
+    {
+        HashSet<GamePoint> visited = new();
+        Queue<GamePoint> toVisit = new();
+        toVisit.Enqueue(initialStorypoint);
+        generalRandomPoints.ForEach((a) => { if (!toVisit.Contains(a)) { toVisit.Enqueue(a); } });
+        pointsPerArea.ForEach((ppa) => ppa.Gamepoints.ForEach((a) => { if (!toVisit.Contains(a)) { toVisit.Enqueue(a); } }));
+        bool allgood = true;
+        while (toVisit.Count > 0)
+        {
+            var next = toVisit.Dequeue();
+            switch (next)
+            {
+                case StoryPoint storypoint:
+                    bool ispossible = false;
+
+                    if (storypoint.Decisions.Count == 0)
+                    {
+                        allgood = false;
+                        Debug.LogWarning($"storypoint {storypoint.name} doesn't have any decisions.");
+                        continue;
+                    }
+
+                    foreach (var decision in storypoint.Decisions)
+                    {
+
+                        if (decision.Guards == null || decision.Guards.Count == 0)
+                        {
+                            ispossible = true;
+                        }
+
+                        if (decision.Next == null || visited.Contains(decision.Next) || toVisit.Contains(decision.Next))
+                            continue;
+
+                        toVisit.Enqueue(decision.Next);
+                    }
+
+                    if (!ispossible)
+                    {
+                        allgood = false;
+                        Debug.LogWarning($"storypoint {storypoint.name} isn't always possible to get out of");
+                    }
+
+                    break;
+                case CombatPoint combatpoint:
+
+                    if (combatpoint.NextFlee != null && !visited.Contains(combatpoint.NextFlee) && !toVisit.Contains(combatpoint.NextFlee))
+                        toVisit.Enqueue(combatpoint.NextFlee);
+
+                    if (combatpoint.NextWin != null && !visited.Contains(combatpoint.NextWin) && !toVisit.Contains(combatpoint.NextWin))
+                        toVisit.Enqueue(combatpoint.NextFlee);
+
+                    break;
+                default:
+                    throw new System.ArgumentException($"The given argument was of type {next.GetType()} which was unknown");
+            }
+        }
+
+        if (allgood)
+        {
+            Debug.Log("Everything seems to be alright!");
+        }
+
+    }
+
 }
