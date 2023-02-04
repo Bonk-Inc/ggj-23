@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Story Point", menuName = "story/story point")]
-public class StoryPoint : ScriptableObject
+[CreateAssetMenu(fileName = "Story Point", menuName = "story/story points/story point")]
+public class StoryPoint : GamePoint
 {
 
     [field: SerializeField]

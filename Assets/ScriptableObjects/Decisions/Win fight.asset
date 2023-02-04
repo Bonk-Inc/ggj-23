@@ -16,4 +16,6 @@ MonoBehaviour:
   <Image>k__BackingField: {fileID: 0}
   <Effects>k__BackingField: []
   <overrideParameters>k__BackingField: 0
-  <Next>k__BackingField: {fileID: 0}
+  <Params>k__BackingField:
+    intValue: 0
+  <Next>k__BackingField: {fileID: 11400000, guid: d4ebf0a5e9eb68f40ad6507b47db5fc7, type: 2}

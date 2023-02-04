@@ -15,6 +15,16 @@ public static class ListExtention
         return item;
     }
 
+    public static Queue<T> ToQueue<T>(this List<T> list)
+    {
+        return new Queue<T>(list);
+    }
+
+    public static void Shuffle<T>(this List<T> list)
+    {
+        list.OrderBy((_) => Random.value);
+    }
+
     public static T GetRandom<T>(this List<T> list)
     {
         if (list.Count == 0)

@@ -22,7 +22,7 @@ public class Decision : ScriptableObject
     public EffectParams Params { get; private set; }
 
     [field: SerializeField]
-    public StoryPoint Next { get; private set; }
+    public GamePoint Next { get; private set; }
 
 
 }
