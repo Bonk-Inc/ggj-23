@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5cc9eb0e4b2a4845bef18553f5ad44e, type: 3}
-  m_Name: Cave - Tangled - Submit
+  m_Name: Cave - Incoming Rock - 2 - Right
   m_EditorClassIdentifier: 
-  <Title>k__BackingField: Submit to the roots.
+  <Title>k__BackingField: Right!
   <Image>k__BackingField: {fileID: 0}
   <Guards>k__BackingField: []
   <Effects>k__BackingField:
-  - OverrideParams: 1
+  - OverrideParams: 0
     <Params>k__BackingField:
       intValue: 0
-      areaValue: 3
+      areaValue: 0
       itemType: 0
       gamePoint: {fileID: 0}
-    <effect>k__BackingField: {fileID: 11400000, guid: edd399b737ee418448e69c2bcab68441, type: 2}
+    <effect>k__BackingField: {fileID: 11400000, guid: ff9c5ac3f23770d479612968f9082dac, type: 2}
   <Next>k__BackingField: {fileID: 0}
   <ExplainingPoint>k__BackingField:
-    <Title>k__BackingField: The roots claim you.
-    <Explaination>k__BackingField: The roots pull your body into the ground.
+    <Title>k__BackingField: Dead end!
+    <Explaination>k__BackingField: You've run into a dead end! The moment you look
+      behind you, the ball crushes you!
