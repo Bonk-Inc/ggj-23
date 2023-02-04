@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f42683cf721010d46884de52e36da3ef, type: 3}
   m_Name: Impossible 2
   m_EditorClassIdentifier: 
-  <Title>k__BackingField: Impossible Point 1
+  <Title>k__BackingField: Impossible Point 2
   <Story>k__BackingField: 
   <Background>k__BackingField: {fileID: 0}
   <Music>k__BackingField: {fileID: 0}
-  <Decisions>k__BackingField: []
+  <Decisions>k__BackingField:
+  - {fileID: 11400000, guid: 917173f0d13c2324d9b2d7e7eb3d1512, type: 2}
   <DecisionTime>k__BackingField: -1
   <DefaultDecision>k__BackingField: {fileID: 0}

@@ -16,7 +16,7 @@ MonoBehaviour:
   <Image>k__BackingField: {fileID: 0}
   <Guards>k__BackingField: []
   <Effects>k__BackingField: []
-  <Next>k__BackingField: {fileID: 0}
+  <Next>k__BackingField: {fileID: 11400000, guid: 6a1c46b8cbafe0f4d9f0da1b37c968fe, type: 2}
   <ExplainingPoint>k__BackingField:
     <Title>k__BackingField: 
     <Explaination>k__BackingField: 

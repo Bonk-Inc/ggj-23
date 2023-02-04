@@ -331,12 +331,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyPointUi: {fileID: 924321660}
+  runStorage: {fileID: 0}
   initialStorypoint: {fileID: 11400000, guid: 0f0a2edc69ac44240ab5b1b7412e94bf, type: 2}
   combat: {fileID: 1541882687}
   generalRandomPoints:
   - {fileID: 11400000, guid: 0f0a2edc69ac44240ab5b1b7412e94bf, type: 2}
   - {fileID: 11400000, guid: cd219775440ac094d90e515c60d62a30, type: 2}
   - {fileID: 11400000, guid: ca269ce238704144e8c76c48e2b68332, type: 2}
+  - {fileID: 11400000, guid: 5d9abfed4b6b0b4469d3ce2c2eda9f9c, type: 2}
+  - {fileID: 11400000, guid: 9e4e10d539853be4e9022a3dbc809ada, type: 2}
   pointsPerArea:
   - <Area>k__BackingField: 1
     <Gamepoints>k__BackingField:

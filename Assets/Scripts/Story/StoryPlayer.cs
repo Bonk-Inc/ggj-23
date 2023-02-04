@@ -9,6 +9,9 @@ public class StoryPlayer : MonoBehaviour
     [SerializeField]
     private StoryPointUi storyPointUi;
 
+    [SerializeField]
+    private RunStorage runStorage;
+
 
     [SerializeField]
     private GamePoint initialStorypoint;
@@ -18,6 +21,8 @@ public class StoryPlayer : MonoBehaviour
 
     [SerializeField]
     private List<GamePoint> generalRandomPoints;
+
+    private List<GamePoint> generalUnlockedPoints;
 
     [SerializeField]
     private List<AreaStoryPoints> pointsPerArea;
@@ -32,8 +37,28 @@ public class StoryPlayer : MonoBehaviour
 
     public void StartStory()
     {
+        runStorage.ReunlockAll();
         storyPointUi.OnDecicionMade += OnDecisionMade;
         SetNextGamepoint(initialStorypoint);
+    }
+
+    public void StopStory()
+    {
+        storyPointUi.OnDecicionMade -= OnDecisionMade;
+        pointsPerArea.ForEach((asp) => asp.UnlockedPoints.Clear());
+        generalUnlockedPoints.Clear();
+    }
+
+    public void UnlockPoint(StoryArea area, GamePoint gamepoint)
+    {
+        if (area == StoryArea.None)
+        {
+            generalUnlockedPoints.Add(gamepoint);
+        }
+        else
+        {
+            pointsPerArea.Find((asp) => asp.Area == area)?.UnlockedPoints.Add(gamepoint);
+        }
     }
 
     private void OnDecisionMade(Decision decision)
@@ -89,8 +114,8 @@ public class StoryPlayer : MonoBehaviour
 
     private GamePoint GetRandomPoint()
     {
-        var areapoints = pointsPerArea.Find((areapoints) => areapoints.Area == Area).Gamepoints;
-        return generalRandomPoints.Union(areapoints).ToList().GetRandom();
+        var areapoints = pointsPerArea.Find((areapoints) => areapoints.Area == Area).GetAllPoints();
+        return generalRandomPoints.Union(generalUnlockedPoints).Union(areapoints).ToList().GetRandom();
     }
 
     [System.Serializable]
@@ -102,6 +127,13 @@ public class StoryPlayer : MonoBehaviour
 
         [field: SerializeField]
         public List<GamePoint> Gamepoints { get; private set; }
+
+        public List<GamePoint> UnlockedPoints { get; private set; }
+
+        public List<GamePoint> GetAllPoints()
+        {
+            return Gamepoints.Union(UnlockedPoints).ToList();
+        }
     }
 
     [ContextMenu("Validate")]

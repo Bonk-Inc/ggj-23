@@ -10,4 +10,6 @@ public class EffectParams
     public StoryArea areaValue = StoryArea.None;
 
     public ItemType itemType = ItemType.Money;
+
+    public GamePoint gamePoint = null;
 }
