@@ -12,6 +12,8 @@ public class StoryPlayer : MonoBehaviour
     [SerializeField]
     private RunStorage runStorage;
 
+    [SerializeField]
+    private GamePoint gameoverPoint;
 
     [SerializeField]
     private GamePoint initialStorypoint;
@@ -118,7 +120,7 @@ public class StoryPlayer : MonoBehaviour
         {
             Combat.Outcome.Win => combatpoint.NextWin,
             Combat.Outcome.Flee => combatpoint.NextFlee,
-            Combat.Outcome.Lose => combatpoint.NextLose,
+            Combat.Outcome.Lose => combatpoint.NextLose ?? gameoverPoint,
             _ => null
         } ?? GetRandomPoint();
         SetNextGamepoint(nextPoint);
