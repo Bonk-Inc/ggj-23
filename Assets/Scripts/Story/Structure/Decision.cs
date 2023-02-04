@@ -13,6 +13,9 @@ public class Decision : ScriptableObject
     public Sprite Image { get; private set; }
 
     [field: SerializeField]
+    public List<DecisionGuard> Guards { get; private set; }
+
+    [field: SerializeField]
     public List<InnerDecisionEffect> Effects { get; private set; }
 
     [field: SerializeField]

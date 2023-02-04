@@ -8,4 +8,6 @@ public class EffectParams
 {
     public int intValue;
     public StoryArea areaValue = StoryArea.None;
+
+    public ItemType itemType = ItemType.Money;
 }

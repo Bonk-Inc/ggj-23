@@ -59,12 +59,28 @@ public class StoryPointUi : MonoBehaviour
         decisionTransform.CommitChildAbortion();
         foreach (var decision in storyPoint.Decisions)
         {
+
+            if (!CheckGuards(decision))
+                continue;
+
             var card = Instantiate(decisionPrefab);
             card.OnChosen += MakeDecision;
             card.SetDecision(decision);
             card.transform.SetParent(decisionTransform, false);
         }
 
+    }
+
+    private bool CheckGuards(Decision decision)
+    {
+        foreach (var guard in decision.Guards)
+        {
+            if (!guard.CheckGuardCondition())
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public event Action OnExaplainerClosed;
