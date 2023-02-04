@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5cc9eb0e4b2a4845bef18553f5ad44e, type: 3}
+  m_Name: Cave - Tangled - Axe
+  m_EditorClassIdentifier: 
+  <Title>k__BackingField: Cut the vines away using your axe.
+  <Image>k__BackingField: {fileID: 0}
+  <Guards>k__BackingField:
+  - {fileID: 11400000, guid: d1cf36755b1502b4e9787dc469804daa, type: 2}
+  <Effects>k__BackingField:
+  - OverrideParams: 1
+    <Params>k__BackingField:
+      intValue: 40
+      areaValue: -1
+      itemType: 1
+    <effect>k__BackingField: {fileID: 11400000, guid: 3411802778935b94397d4c3680f1fb98, type: 2}
+  <Next>k__BackingField: {fileID: 0}
+  <ExplainingPoint>k__BackingField:
+    <Title>k__BackingField: 
+    <Explaination>k__BackingField: 

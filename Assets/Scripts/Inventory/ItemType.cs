@@ -13,6 +13,9 @@ public enum ItemType
     //Tools
     Dagger,
     Axe,
-    FireStarter
+    FireStarter,
+
+    //Keys
+    RibbonKey
 
 }
