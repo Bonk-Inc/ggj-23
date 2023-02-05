@@ -20,9 +20,10 @@ public static class ListExtention
         return new Queue<T>(list);
     }
 
-    public static void Shuffle<T>(this List<T> list)
+    public static List<T> Shuffle<T>(this List<T> list)
     {
-        list.OrderBy((_) => Random.value);
+        return list.OrderBy<T, int>((item) => Random.Range(int.MinValue, int.MaxValue)).ToList();
+
     }
 
     public static T GetRandom<T>(this List<T> list)

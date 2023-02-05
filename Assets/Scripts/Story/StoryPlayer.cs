@@ -109,9 +109,13 @@ public class StoryPlayer : MonoBehaviour
         {
             case StoryPoint storypoint:
                 storyPointUi.SetStoryPoint(storypoint);
+                if (storypoint.AddStoreOptions)
+                {
+                    storyPointUi.AddStoreOptions(Area);
+                }
                 break;
             case CombatPoint combatpoint:
-                combat.StartCombat(combatpoint.Enemies, (outcome) => OnCombatFinished(outcome, combatpoint));
+                combat.StartCombat(combatpoint.Enemies, (outcome, playerHealth) => OnCombatFinished(outcome, combatpoint.Enemies, playerHealth, combatpoint, combatpoint));
                 break;
             default:
                 throw new System.ArgumentException($"The given argument was of type {gamepoint.GetType()} which was unknown");
@@ -119,8 +123,9 @@ public class StoryPlayer : MonoBehaviour
 
     }
 
-    private void OnCombatFinished(Combat.Outcome outcome, CombatPoint combatpoint)
+    private void OnCombatFinished(Combat.Outcome outcome, List<EnemyData> enemiesSlain, int playerHealth, CombatPoint previous, CombatPoint combatpoint)
     {
+
         GamePoint nextPoint = outcome switch
         {
             Combat.Outcome.Win => combatpoint.NextWin,
@@ -128,12 +133,32 @@ public class StoryPlayer : MonoBehaviour
             Combat.Outcome.Lose => combatpoint.NextLose ?? gameoverPoint,
             _ => null
         } ?? GetRandomPoint();
-        SetNextGamepoint(nextPoint);
+        string enemies = "";
+        foreach (var enemy in enemiesSlain)
+        {
+            enemies += enemy.EnemyName;
+            enemies += "\n";
+        }
+        StoryPoint storyPoint = ScriptableObject.CreateInstance<StoryPoint>();
+        storyPoint.Story = string.Format("{0} \n\n {1}",
+            outcome == Combat.Outcome.Win ? "Some enemies were slain:" : "You were defeated by:",
+            enemies);
+        storyPoint.Background = enemiesSlain[0].Image;
+        Decision decision = ScriptableObject.CreateInstance<Decision>();
+        decision.Title = "Next";
+        decision.Next = nextPoint;
+        decision.Effects = new List<Decision.InnerDecisionEffect>();
+        decision.Guards = new List<DecisionGuard>();
+        decision.ExplainingPoint = new Explainer();
+        storyPoint.Decisions = new List<Decision>();
+        storyPoint.Decisions.Add(decision);
+
+        SetNextGamepoint(storyPoint);
     }
 
     private GamePoint GetRandomPoint()
     {
-        var areapoints = pointsPerArea.Find((areapoints) => areapoints.Area == Area).GetAllPoints();
+        var areapoints = pointsPerArea.Find((areapoints) => areapoints.Area == Area)?.GetAllPoints() ?? new List<GamePoint>();
         return generalRandomPoints.Union(generalUnlockedPoints).Union(areapoints).ToList().GetRandom();
     }
 

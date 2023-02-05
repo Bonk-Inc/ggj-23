@@ -12,7 +12,7 @@ public class Combat : MonoBehaviour
 
     private Queue<EnemyData> enemyQueue;
 
-    private Action<Outcome> onCombatFinished;
+    private Action<Outcome, int> onCombatFinished;
 
     private bool running = false;
     [SerializeField] private Player player;
@@ -21,7 +21,7 @@ public class Combat : MonoBehaviour
 
     public Enemy currentEnemy;
 
-    public void StartCombat(List<EnemyData> enemies, Action<Outcome> OnCombatFinished = null)
+    public void StartCombat(List<EnemyData> enemies, Action<Outcome, int> OnCombatFinished = null)
     {
         onCombatFinished = OnCombatFinished;
         this.enemyQueue = enemies.ToQueue();
@@ -32,7 +32,8 @@ public class Combat : MonoBehaviour
         while (true)
         {
             //TODO should be damage from player.
-            enemyPrefab.Hit(50);
+
+            enemyPrefab.Hit(player.PlayerLevel.CurrentLevel.Damage);
 
             // not running when all enemies are ded.
             if (!running)
@@ -60,7 +61,10 @@ public class Combat : MonoBehaviour
 
     private void OnEnemyDied()
     {
-        enemyQueue.Dequeue();
+        var deadEnemy = enemyQueue.Dequeue();
+        var moneyDrop = deadEnemy.DropAmount + UnityEngine.Random.Range(-deadEnemy.DropRange, deadEnemy.DropRange + 1);//+1 because max exclusive
+        PlayerInventory.Instance.InsertItem(ItemType.Money, moneyDrop);
+        player.PlayerLevel.AddExperience(deadEnemy.Experience);
         if (enemyQueue.Count == 0)
         {
             CombatEnded(Outcome.Win);
@@ -87,7 +91,7 @@ public class Combat : MonoBehaviour
             return;
 
         running = false;
-        onCombatFinished?.Invoke(outcome);
+        onCombatFinished?.Invoke(outcome, player.Health.CurrentValue);
         onCombatFinished = null;
         enemyQueue = null;
         currentEnemy = null;

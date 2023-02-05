@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5cc9eb0e4b2a4845bef18553f5ad44e, type: 3}
+  m_Name: Forest - Godess - Quest Complete
+  m_EditorClassIdentifier: 
+  <Title>k__BackingField: Completed Quest
+  <Image>k__BackingField: {fileID: 0}
+  <Guards>k__BackingField:
+  - {fileID: 11400000, guid: 7d74f3ab9e77b3c4884bb9e9a5f1bc68, type: 2}
+  - {fileID: 11400000, guid: a971ad646fcb79f4693f788112a82503, type: 2}
+  <Effects>k__BackingField: []
+  <Next>k__BackingField: {fileID: 0}
+  <ExplainingPoint>k__BackingField:
+    <Title>k__BackingField: Very well, your forest will be saved.
+    <Explaination>k__BackingField: You however, will have to remain in this forest.
+      Take over the roles of Treaper and Crab King.

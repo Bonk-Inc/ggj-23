@@ -6,6 +6,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
+    private static Player instance;
+    public static Player Instance => instance;
 
     [field: SerializeField]
     public PlayerStat Health { get; private set; }
@@ -13,10 +15,26 @@ public class Player : MonoBehaviour
     [field: SerializeField]
     public PlayerStat Stamina { get; private set; }
 
+    [field: SerializeField]
+    public PlayerLevelManager PlayerLevel { get; private set; }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            throw new System.Exception("Multiple players not allowed");
+        }
+    }
+
     public void ResetStats()
     {
         Health.Reset();
         Stamina.Reset();
+        PlayerLevel.ResetLevel();
     }
 
 }

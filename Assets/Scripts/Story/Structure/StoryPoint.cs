@@ -7,30 +7,33 @@ public class StoryPoint : GamePoint
 {
 
     [field: SerializeField]
-    public string Title { get; private set; }
+    public string Title { get; set; }
 
     [field: SerializeField]
-    public string Story { get; private set; }
+    public string Story { get; set; }
 
     [field: SerializeField]
-    public Sprite Background { get; private set; }
+    public Sprite Background { get; set; }
 
     [field: SerializeField]
-    public Color BackgroundColor { get; private set; } = Color.white;
+    public Color BackgroundColor { get; set; } = Color.white;
 
     [field: SerializeField]
-    public Color TextColor { get; private set; } = Color.white;
+    public Color TextColor { get; set; } = Color.white;
 
     [field: SerializeField]
-    public AudioClip Music { get; private set; }
+    public AudioClip Music { get; set; }
 
     [field: SerializeField]
-    public List<Decision> Decisions { get; private set; }
+    public List<Decision> Decisions { get; set; }
 
     [field: SerializeField]
-    public float DecisionTime { get; private set; } = -1;
+    public float DecisionTime { get; set; } = -1;
 
     [field: SerializeField]
-    public Decision DefaultDecision { get; private set; } = null;
+    public Decision DefaultDecision { get; set; } = null;
+
+    [field: SerializeField]
+    public bool AddStoreOptions { get; set; } = false;
 
 }

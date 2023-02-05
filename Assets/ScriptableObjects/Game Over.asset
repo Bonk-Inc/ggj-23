@@ -15,6 +15,8 @@ MonoBehaviour:
   <Title>k__BackingField: Rest well
   <Story>k__BackingField: Our young hero is lost within the roots of the cave
   <Background>k__BackingField: {fileID: 0}
+  <BackgroundColor>k__BackingField: {r: 0.1509434, g: 0.14154504, b: 0.14154504, a: 1}
+  <TextColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
   <Music>k__BackingField: {fileID: 0}
   <Decisions>k__BackingField:
   - {fileID: 11400000, guid: 0e736d3930173a74d9885709cdb5fb05, type: 2}

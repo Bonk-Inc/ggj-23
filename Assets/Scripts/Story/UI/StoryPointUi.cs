@@ -26,6 +26,9 @@ public class StoryPointUi : MonoBehaviour
     private StoryPoint storyPoint;
 
     [SerializeField]
+    private MisterKrabs store;
+
+    [SerializeField]
     private Image clock;
 
     public event Action<Decision> OnDecicionMade;
@@ -71,7 +74,25 @@ public class StoryPointUi : MonoBehaviour
             card.SetDecision(decision);
             card.transform.SetParent(decisionTransform, false);
         }
+    }
 
+    public void AddStoreOptions(StoryArea area)
+    {
+        var storeItems = store.GetItemsFor(area);
+        foreach (var storeItem in storeItems)
+        {
+            var card = Instantiate(decisionPrefab);
+            card.OnChosen += (_) =>
+            {
+                store.ItemBought(storeItem);
+                PlayerInventory.Instance.InsertItem(storeItem.Item.ItemType);
+                PlayerInventory.Instance.RemoveItem(ItemType.Money, storeItem.Price);
+                Destroy(card.gameObject);
+            };
+            card.SetStoreVisuals(storeItem.Item.Icon, storeItem.Item.ItemName, storeItem.Price);
+            card.transform.SetParent(decisionTransform, false);
+            card.transform.SetAsFirstSibling();
+        }
     }
 
     private bool CheckGuards(Decision decision)

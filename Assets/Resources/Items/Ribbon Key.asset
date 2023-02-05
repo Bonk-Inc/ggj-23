@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ItemType>k__BackingField: 6
   <ItemName>k__BackingField: Ribbon Key
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 1437ca38ce5b70d49bd1e11294096912, type: 3}
   <Max>k__BackingField: 1
+  <IsTool>k__BackingField: 1

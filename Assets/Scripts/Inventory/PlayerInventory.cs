@@ -13,6 +13,7 @@ public class PlayerInventory : MonoBehaviour
 
 
     public event Action OnToolsChanged;
+    public event Action OnMoneyChanged;
 
     private void Awake()
     {
@@ -78,6 +79,11 @@ public class PlayerInventory : MonoBehaviour
         if (items[itemType].data.IsTool)
         {
             OnToolsChanged?.Invoke();
+        }
+
+        if (items[itemType].data.ItemType == ItemType.Money)
+        {
+            OnMoneyChanged?.Invoke();
         }
     }
 

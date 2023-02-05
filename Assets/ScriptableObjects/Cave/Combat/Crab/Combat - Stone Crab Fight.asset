@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b6974a2aa0c8c4796080d34c7bf516, type: 3}
+  m_Name: Combat - Stone Crab Fight
+  m_EditorClassIdentifier: 
+  <Enemies>k__BackingField:
+  - {fileID: 11400000, guid: 580cdbc8a14ef4a41ba0a8ebec8f876f, type: 2}
+  <NextWin>k__BackingField: {fileID: 0}
+  <NextFlee>k__BackingField: {fileID: 0}
+  <NextLose>k__BackingField: {fileID: 0}

@@ -16,6 +16,8 @@ MonoBehaviour:
   <Story>k__BackingField: All you can remember is that you must find a way to save
     the roots of your forest
   <Background>k__BackingField: {fileID: 0}
+  <BackgroundColor>k__BackingField: {r: 0.3207547, g: 0.23421144, b: 0.23421144, a: 1}
+  <TextColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
   <Music>k__BackingField: {fileID: 0}
   <Decisions>k__BackingField:
   - {fileID: 11400000, guid: f48e98fc1c57a3847a5598760b6f6f22, type: 2}

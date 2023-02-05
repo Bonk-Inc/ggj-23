@@ -12,17 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5cc9eb0e4b2a4845bef18553f5ad44e, type: 3}
   m_Name: Cave - Tangled - Hands
   m_EditorClassIdentifier: 
-  <Title>k__BackingField: Untangle the vines with your hands.
+  <Title>k__BackingField: Use your hands.
   <Image>k__BackingField: {fileID: 0}
-  <Guards>k__BackingField: []
+  <Guards>k__BackingField:
+  - {fileID: 11400000, guid: 669f08dc6ad73c84f9069fb4b935e1fe, type: 2}
   <Effects>k__BackingField:
   - OverrideParams: 0
     <Params>k__BackingField:
       intValue: 0
       areaValue: 0
       itemType: 0
+      gamePoint: {fileID: 0}
     <effect>k__BackingField: {fileID: 11400000, guid: d1a22008639417343b554a7cb6662743, type: 2}
   <Next>k__BackingField: {fileID: 0}
   <ExplainingPoint>k__BackingField:
-    <Title>k__BackingField: 
-    <Explaination>k__BackingField: 
+    <Title>k__BackingField: You untangle the vines with your hands.
+    <Explaination>k__BackingField: This takes a great amount of effort.
