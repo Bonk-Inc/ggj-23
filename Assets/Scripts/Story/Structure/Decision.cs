@@ -7,22 +7,22 @@ public class Decision : ScriptableObject
 {
 
     [field: SerializeField]
-    public string Title { get; private set; }
+    public string Title { get;  set; }
 
     [field: SerializeField]
-    public Sprite Image { get; private set; }
+    public Sprite Image { get;  set; }
 
     [field: SerializeField]
-    public List<DecisionGuard> Guards { get; private set; }
+    public List<DecisionGuard> Guards { get;  set; }
 
     [field: SerializeField]
-    public List<InnerDecisionEffect> Effects { get; private set; }
+    public List<InnerDecisionEffect> Effects { get;  set; }
 
     [field: SerializeField]
-    public GamePoint Next { get; private set; }
+    public GamePoint Next { get;  set; }
 
     [field: SerializeField]
-    public Explainer ExplainingPoint { get; private set; }
+    public Explainer ExplainingPoint { get;  set; }
 
 
     [System.Serializable]

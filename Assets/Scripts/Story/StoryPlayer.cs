@@ -103,7 +103,7 @@ public class StoryPlayer : MonoBehaviour
 
     }
 
-    private void SetNextGamepoint(GamePoint gamepoint)
+   private void SetNextGamepoint(GamePoint gamepoint)
     {
         switch (gamepoint)
         {
@@ -111,7 +111,7 @@ public class StoryPlayer : MonoBehaviour
                 storyPointUi.SetStoryPoint(storypoint);
                 break;
             case CombatPoint combatpoint:
-                combat.StartCombat(combatpoint.Enemies, (outcome) => OnCombatFinished(outcome, combatpoint));
+                combat.StartCombat(combatpoint.Enemies, (outcome, playerHealth) => OnCombatFinished(outcome, combatpoint.Enemies, playerHealth, combatpoint, combatpoint));
                 break;
             default:
                 throw new System.ArgumentException($"The given argument was of type {gamepoint.GetType()} which was unknown");
@@ -119,8 +119,9 @@ public class StoryPlayer : MonoBehaviour
 
     }
 
-    private void OnCombatFinished(Combat.Outcome outcome, CombatPoint combatpoint)
+    private void OnCombatFinished(Combat.Outcome outcome,List<EnemyData> enemiesSlain, int playerHealth,CombatPoint previous, CombatPoint combatpoint)
     {
+        
         GamePoint nextPoint = outcome switch
         {
             Combat.Outcome.Win => combatpoint.NextWin,
@@ -128,7 +129,27 @@ public class StoryPlayer : MonoBehaviour
             Combat.Outcome.Lose => combatpoint.NextLose ?? gameoverPoint,
             _ => null
         } ?? GetRandomPoint();
-        SetNextGamepoint(nextPoint);
+        string enemies = "";
+        foreach (var enemy in enemiesSlain)
+        {
+            enemies += enemy.EnemyName;
+            enemies += "\n";
+        }
+        StoryPoint storyPoint = ScriptableObject.CreateInstance<StoryPoint>();
+        storyPoint.Story = string.Format("{0} \n\n {1}",
+            outcome == Combat.Outcome.Win ? "Some enemies were slain:" : "You were defeated by:",
+            enemies);
+        storyPoint.Background = enemiesSlain[0].Image;
+        Decision decision = ScriptableObject.CreateInstance<Decision>();
+        decision.Title = "Next";
+        decision.Next = nextPoint;
+        decision.Effects = new List<Decision.InnerDecisionEffect>();
+        decision.Guards = new List<DecisionGuard>();
+        decision.ExplainingPoint = new Explainer();
+        storyPoint.Decisions = new List<Decision>();
+        storyPoint.Decisions.Add(decision);
+        
+        SetNextGamepoint(storyPoint);
     }
 
     private GamePoint GetRandomPoint()

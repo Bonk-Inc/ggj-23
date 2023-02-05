@@ -12,7 +12,7 @@ public class Combat : MonoBehaviour
 
     private Queue<EnemyData> enemyQueue;
 
-    private Action<Outcome> onCombatFinished;
+    private Action<Outcome, int> onCombatFinished;
 
     private bool running = false;
     [SerializeField] private Player player;
@@ -21,7 +21,7 @@ public class Combat : MonoBehaviour
 
     public Enemy currentEnemy;
 
-    public void StartCombat(List<EnemyData> enemies, Action<Outcome> OnCombatFinished = null)
+    public void StartCombat(List<EnemyData> enemies, Action<Outcome, int> OnCombatFinished = null)
     {
         onCombatFinished = OnCombatFinished;
         this.enemyQueue = enemies.ToQueue();
@@ -87,7 +87,7 @@ public class Combat : MonoBehaviour
             return;
 
         running = false;
-        onCombatFinished?.Invoke(outcome);
+        onCombatFinished?.Invoke(outcome, player.Health.CurrentValue);
         onCombatFinished = null;
         enemyQueue = null;
         currentEnemy = null;
