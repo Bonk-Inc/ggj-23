@@ -2918,6 +2918,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
+      propertyPath: pointsPerArea.Array.data[1].<Gamepoints>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
       propertyPath: pointsPerArea.Array.data[4].<Gamepoints>k__BackingField.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2925,6 +2929,14 @@ PrefabInstance:
       propertyPath: pointsPerArea.Array.data[0].<Gamepoints>k__BackingField.Array.data[4]
       value: 
       objectReference: {fileID: 11400000, guid: f3a32d1bdc512f648b96d48970b0e9c9, type: 2}
+    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
+      propertyPath: pointsPerArea.Array.data[1].<Gamepoints>k__BackingField.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9acb25b02723a2f40adb3ed3237a2c0e, type: 2}
+    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
+      propertyPath: pointsPerArea.Array.data[1].<Gamepoints>k__BackingField.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9acb25b02723a2f40adb3ed3237a2c0e, type: 2}
     - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
       propertyPath: pointsPerArea.Array.data[4].<Gamepoints>k__BackingField.Array.data[0]
       value: 
