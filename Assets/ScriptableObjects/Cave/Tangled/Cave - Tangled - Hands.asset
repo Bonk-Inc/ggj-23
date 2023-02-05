@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Title>k__BackingField: Use your hands.
   <Image>k__BackingField: {fileID: 0}
-  <Guards>k__BackingField: []
+  <Guards>k__BackingField:
+  - {fileID: 11400000, guid: 669f08dc6ad73c84f9069fb4b935e1fe, type: 2}
   <Effects>k__BackingField:
   - OverrideParams: 0
     <Params>k__BackingField:

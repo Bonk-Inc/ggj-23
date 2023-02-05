@@ -15,11 +15,11 @@ MonoBehaviour:
   <Title>k__BackingField: Ruuuuun!
   <Story>k__BackingField: Which way do you go?!?
   <Background>k__BackingField: {fileID: 0}
-  <BackgroundColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
+  <BackgroundColor>k__BackingField: {r: 0.23584908, g: 0.21671416, b: 0.21671416, a: 1}
   <TextColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
   <Music>k__BackingField: {fileID: 0}
   <Decisions>k__BackingField:
   - {fileID: 11400000, guid: 2bc3b1e63f67e5f4f9e7e18c08ec75c4, type: 2}
-  - {fileID: 11400000, guid: 2bc3b1e63f67e5f4f9e7e18c08ec75c4, type: 2}
+  - {fileID: 11400000, guid: 3792fe8e7b1ad0545a6816f894563276, type: 2}
   <DecisionTime>k__BackingField: 10
   <DefaultDecision>k__BackingField: {fileID: 11400000, guid: 3792fe8e7b1ad0545a6816f894563276, type: 2}
