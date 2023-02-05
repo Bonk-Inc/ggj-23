@@ -16,6 +16,9 @@ public class InventoryUI : MonoBehaviour
     private TMPro.TextMeshProUGUI moneyDisplay;
 
     [SerializeField]
+    private TMPro.TextMeshProUGUI expDisplay;
+
+    [SerializeField]
     private TMPro.TextMeshProUGUI healthPotionDisplay;
 
     [SerializeField]
@@ -29,6 +32,8 @@ public class InventoryUI : MonoBehaviour
         moneyDisplay.text = inventory.GetItemCount(ItemType.Money).ToString();
         healthPotionDisplay.text = inventory.GetItemCount(ItemType.HealthPotion).ToString();
         staminaPotionDisplay.text = inventory.GetItemCount(ItemType.StaminaPotion).ToString();
+        Debug.Log($"stats {stats} pl {stats?.PlayerLevel} curr {stats?.PlayerLevel?.CurrentLevel} lev {stats?.PlayerLevel?.CurrentLevel?.level}");
+        expDisplay.text = stats.PlayerLevel.CurrentLevel.level.ToString();
     }
 
     public void UseHealthPotion()

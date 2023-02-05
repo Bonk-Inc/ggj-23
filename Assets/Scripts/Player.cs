@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
         {
             throw new System.Exception("Multiple players not allowed");
         }
+        PlayerLevel.ResetLevel();
     }
 
     public void ResetStats()

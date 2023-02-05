@@ -18,7 +18,7 @@ public class PlayerLevelManager
 
     private void Awake()
     {
-        levels[levels.Count - 1].ExperienceNeeded = int.MaxValue;
+
     }
 
     public void AddExperience(int exp)
@@ -29,6 +29,11 @@ public class PlayerLevelManager
 
     public void ResetLevel()
     {
+        levels[levels.Count - 1].ExperienceNeeded = int.MaxValue;
+        for (int i = 0; i < levels.Count; i++)
+        {
+            levels[i].level = i + 1;
+        }
         currentExp = 0;
         CalculateCurrentLevel();
     }
@@ -63,6 +68,9 @@ public class PlayerLevelManager
 
         [field: SerializeField]
         public int Damage { get; set; }
+
+        [HideInInspector]
+        public int level;
 
     }
 
