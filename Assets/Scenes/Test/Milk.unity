@@ -1363,6 +1363,8 @@ MonoBehaviour:
   <Stamina>k__BackingField:
     <MinValue>k__BackingField: 0
     <MaxValue>k__BackingField: 100
+  <PlayerLevel>k__BackingField:
+    levels: []
 --- !u!4 &788924804
 Transform:
   m_ObjectHideFlags: 0
@@ -2893,58 +2895,6 @@ PrefabInstance:
       propertyPath: playerStats
       value: 
       objectReference: {fileID: 788924803}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: pointsPerArea.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: generalRandomPoints.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: generalRandomPoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: f3a32d1bdc512f648b96d48970b0e9c9, type: 2}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: generalRandomPoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: d072d7ef7a43789418857b90f4fc9a12, type: 2}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: pointsPerArea.Array.data[4].<Area>k__BackingField
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: pointsPerArea.Array.data[0].<Gamepoints>k__BackingField.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: pointsPerArea.Array.data[1].<Gamepoints>k__BackingField.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: pointsPerArea.Array.data[4].<Gamepoints>k__BackingField.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: pointsPerArea.Array.data[0].<Gamepoints>k__BackingField.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: f3a32d1bdc512f648b96d48970b0e9c9, type: 2}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: pointsPerArea.Array.data[1].<Gamepoints>k__BackingField.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 9acb25b02723a2f40adb3ed3237a2c0e, type: 2}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: pointsPerArea.Array.data[1].<Gamepoints>k__BackingField.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 9acb25b02723a2f40adb3ed3237a2c0e, type: 2}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: pointsPerArea.Array.data[4].<Gamepoints>k__BackingField.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 90366c7c8019d2648ae58cf6236b3f0e, type: 2}
-    - target: {fileID: 8136918700103721514, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
-      propertyPath: pointsPerArea.Array.data[4].<Gamepoints>k__BackingField.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 06c745f2d65e54942be8cf376dcaf2a3, type: 2}
     - target: {fileID: 8136918700103721515, guid: f6fcaeeda81e56e4e9ba8dbb6ace9e1a, type: 3}
       propertyPath: m_Name
       value: Story
