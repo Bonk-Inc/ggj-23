@@ -44,6 +44,7 @@ public class StoryPlayer : MonoBehaviour
     {
         playerStats.ResetStats();
         runStorage.ReunlockAll();
+        PlayerInventory.Instance.ResetItems();
         storyPointUi.OnDecicionMade += OnDecisionMade;
         SetNextGamepoint(initialStorypoint);
     }
@@ -53,6 +54,12 @@ public class StoryPlayer : MonoBehaviour
         storyPointUi.OnDecicionMade -= OnDecisionMade;
         pointsPerArea.ForEach((asp) => asp.UnlockedPoints.Clear());
         generalUnlockedPoints.Clear();
+    }
+
+    public void RestartStory()
+    {
+        StopStory();
+        StartStory();
     }
 
     public void UnlockPoint(StoryArea area, GamePoint gamepoint)
@@ -83,6 +90,12 @@ public class StoryPlayer : MonoBehaviour
     {
         foreach (var effect in decision.Effects)
         {
+            if (effect.effect is RestartEffect)
+            {
+                RestartStory();
+                return;
+            }
+
             effect.effect.DoEffect(effect.OverrideParams ? effect.Params : null);
         }
 

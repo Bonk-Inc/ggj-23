@@ -26,7 +26,12 @@ public class PlayerInventory : MonoBehaviour
             throw new System.Exception("Multiple inventories not allowed");
         }
 
+    }
+
+    public void ResetItems()
+    {
         var itemsdata = Resources.LoadAll<ItemData>("Items");
+        items.Clear();
         foreach (var data in itemsdata)
         {
             items.Add(data.ItemType, new Item()
