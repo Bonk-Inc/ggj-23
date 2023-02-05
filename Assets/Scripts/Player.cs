@@ -38,6 +38,17 @@ public class Player : MonoBehaviour
         PlayerLevel.ResetLevel();
     }
 
+    public void AddHealth(int amount)
+    {
+        Health.Increase(amount);
+    }
+
+    public void AddStamina(int amount)
+    {
+        Health.Increase(amount);
+    }
+
+
 }
 
 [System.Serializable]
