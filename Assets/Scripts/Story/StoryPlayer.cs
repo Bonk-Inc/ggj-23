@@ -109,6 +109,10 @@ public class StoryPlayer : MonoBehaviour
         {
             case StoryPoint storypoint:
                 storyPointUi.SetStoryPoint(storypoint);
+                if (storypoint.AddStoreOptions)
+                {
+                    storyPointUi.AddStoreOptions(Area);
+                }
                 break;
             case CombatPoint combatpoint:
                 combat.StartCombat(combatpoint.Enemies, (outcome, playerHealth) => OnCombatFinished(outcome, combatpoint.Enemies, playerHealth, combatpoint, combatpoint));
@@ -154,7 +158,7 @@ public class StoryPlayer : MonoBehaviour
 
     private GamePoint GetRandomPoint()
     {
-        var areapoints = pointsPerArea.Find((areapoints) => areapoints.Area == Area).GetAllPoints();
+        var areapoints = pointsPerArea.Find((areapoints) => areapoints.Area == Area)?.GetAllPoints() ?? new List<GamePoint>();
         return generalRandomPoints.Union(generalUnlockedPoints).Union(areapoints).ToList().GetRandom();
     }
 
