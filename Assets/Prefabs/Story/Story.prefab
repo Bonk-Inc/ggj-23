@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: m_FillAmount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1329762041, guid: 1a8da96a987f8344b97c5e551f2d313b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7759592617469253716, guid: 1a8da96a987f8344b97c5e551f2d313b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

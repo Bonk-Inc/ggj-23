@@ -201,9 +201,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7947279446613301901}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerTurnHandler, Assembly-CSharp
-        m_MethodName: Attack
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -598,8 +598,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7947279446613302003}
   - component: {fileID: 7947279446613302002}
-  - component: {fileID: 7947279446613301900}
-  - component: {fileID: 7947279446613301901}
   m_Layer: 0
   m_Name: Combat
   m_TagString: Untagged
@@ -621,7 +619,7 @@ Transform:
   m_Children:
   - {fileID: 7947279446629277475}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7947279446613302002
 MonoBehaviour:
@@ -637,41 +635,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7947279446475773358}
   enemyCardParent: {fileID: 7947279445428248609}
+  player: {fileID: 0}
   combatParent: {fileID: 7947279446613302000}
   currentEnemy: {fileID: 0}
-  combatTurnManager: {fileID: 7947279446613301900}
---- !u!114 &7947279446613301900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7947279446613302000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab8ccf5c593e18744a56f9db83994ba7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  combat: {fileID: 7947279446613302002}
-  <PlayerTurn>k__BackingField: {fileID: 7947279446613301901}
-  enemyTurn: {fileID: 0}
---- !u!114 &7947279446613301901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7947279446613302000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f9a39eedd20bbf4dba20caee2f2c878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  combat: {fileID: 7947279446613302002}
-  damage: 40
-  actionButtons:
-  - {fileID: 7947279446357202973}
-  - {fileID: 7947279447097267459}
 --- !u!1 &7947279446629277472
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,9 +898,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7947279446613301901}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerTurnHandler, Assembly-CSharp
-        m_MethodName: Flee
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1040,7 +1006,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Card
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2271848054873068232, guid: 745669d8ab4304c4ba87af4a01e1c954, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 745669d8ab4304c4ba87af4a01e1c954, type: 3}
 --- !u!114 &7947279446475773358 stripped

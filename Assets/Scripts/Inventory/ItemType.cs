@@ -16,6 +16,8 @@ public enum ItemType
     FireStarter,
 
     //Keys
-    RibbonKey
+    RibbonKey,
+    TreeHeart,
+    CrabHeart
 
 }
