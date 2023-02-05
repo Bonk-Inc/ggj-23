@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42683cf721010d46884de52e36da3ef, type: 3}
+  m_Name: Forest - Treaper Opening
+  m_EditorClassIdentifier: 
+  <Title>k__BackingField: You find yourself in an ominous opening.
+  <Story>k__BackingField: If the treaper is here, there might not be a way back...
+  <Background>k__BackingField: {fileID: 21300000, guid: 5c86a49e62d8da34dac4e8cea47aac83, type: 3}
+  <BackgroundColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
+  <TextColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
+  <Music>k__BackingField: {fileID: 0}
+  <Decisions>k__BackingField:
+  - {fileID: 11400000, guid: 290842e48380c0846880f3c3c55aa072, type: 2}
+  - {fileID: 11400000, guid: 1cd5e33c6cb010943bcc3507b5bc2fa4, type: 2}
+  <DecisionTime>k__BackingField: -1
+  <DefaultDecision>k__BackingField: {fileID: 0}
+  <AddStoreOptions>k__BackingField: 0
