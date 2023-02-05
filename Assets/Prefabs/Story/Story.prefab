@@ -134,7 +134,7 @@ Transform:
   m_Children:
   - {fileID: 8136918698822006723}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8136918700103721514
 MonoBehaviour:
@@ -154,7 +154,9 @@ MonoBehaviour:
   initialStorypoint: {fileID: 11400000, guid: 0d5f24e5d1b56cc4692e8a73c9195744, type: 2}
   combat: {fileID: 0}
   playerStats: {fileID: 0}
-  generalRandomPoints: []
+  generalRandomPoints:
+  - {fileID: 11400000, guid: f3a32d1bdc512f648b96d48970b0e9c9, type: 2}
+  - {fileID: 11400000, guid: d072d7ef7a43789418857b90f4fc9a12, type: 2}
   pointsPerArea:
   - <Area>k__BackingField: 1
     <Gamepoints>k__BackingField:
@@ -164,13 +166,22 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 581c3729e4db802449cfbe1e35ba1f42, type: 2}
   - <Area>k__BackingField: 0
     <Gamepoints>k__BackingField:
-    - {fileID: 11400000, guid: 90366c7c8019d2648ae58cf6236b3f0e, type: 2}
-    - {fileID: 11400000, guid: 06c745f2d65e54942be8cf376dcaf2a3, type: 2}
+    - {fileID: 11400000, guid: 9acb25b02723a2f40adb3ed3237a2c0e, type: 2}
+    - {fileID: 11400000, guid: 06e1cded7495b6248a267314cca19e92, type: 2}
+    - {fileID: 11400000, guid: 33bbdaa306adffc4681ac8e03bb90347, type: 2}
   - <Area>k__BackingField: 2
     <Gamepoints>k__BackingField:
     - {fileID: 11400000, guid: 90366c7c8019d2648ae58cf6236b3f0e, type: 2}
     - {fileID: 11400000, guid: 06c745f2d65e54942be8cf376dcaf2a3, type: 2}
   - <Area>k__BackingField: 3
+    <Gamepoints>k__BackingField:
+    - {fileID: 11400000, guid: 90366c7c8019d2648ae58cf6236b3f0e, type: 2}
+    - {fileID: 11400000, guid: 06c745f2d65e54942be8cf376dcaf2a3, type: 2}
+  - <Area>k__BackingField: 5
+    <Gamepoints>k__BackingField:
+    - {fileID: 11400000, guid: 90366c7c8019d2648ae58cf6236b3f0e, type: 2}
+    - {fileID: 11400000, guid: 06c745f2d65e54942be8cf376dcaf2a3, type: 2}
+  - <Area>k__BackingField: 4
     <Gamepoints>k__BackingField:
     - {fileID: 11400000, guid: 90366c7c8019d2648ae58cf6236b3f0e, type: 2}
     - {fileID: 11400000, guid: 06c745f2d65e54942be8cf376dcaf2a3, type: 2}
