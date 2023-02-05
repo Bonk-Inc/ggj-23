@@ -1,12 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DecisionUI : MonoBehaviour
 {
-
     [SerializeField]
     private TMPro.TextMeshProUGUI titleUI;
 
@@ -28,6 +25,4 @@ public class DecisionUI : MonoBehaviour
     {
         OnChosen?.Invoke(Decision);
     }
-
-
 }
