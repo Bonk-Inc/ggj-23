@@ -32,7 +32,6 @@ public class DecisionUI : MonoBehaviour
         UpdateAfforability();
         PlayerInventory.Instance.OnMoneyChanged += UpdateAfforability;
 
-        image.sprite = sprite;
         titleUI.text = $"{title} ({price})";
     }
 
