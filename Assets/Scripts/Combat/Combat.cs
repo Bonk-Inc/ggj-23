@@ -32,7 +32,8 @@ public class Combat : MonoBehaviour
         while (true)
         {
             //TODO should be damage from player.
-            enemyPrefab.Hit(50);
+
+            enemyPrefab.Hit(player.PlayerLevel.CurrentLevel.Damage);
 
             // not running when all enemies are ded.
             if (!running)
@@ -63,6 +64,7 @@ public class Combat : MonoBehaviour
         var deadEnemy = enemyQueue.Dequeue();
         var moneyDrop = deadEnemy.DropAmount + UnityEngine.Random.Range(-deadEnemy.DropRange, deadEnemy.DropRange + 1);//+1 because max exclusive
         PlayerInventory.Instance.InsertItem(ItemType.Money, moneyDrop);
+        player.PlayerLevel.AddExperience(deadEnemy.Experience);
         if (enemyQueue.Count == 0)
         {
             CombatEnded(Outcome.Win);

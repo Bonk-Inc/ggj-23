@@ -103,7 +103,7 @@ public class StoryPlayer : MonoBehaviour
 
     }
 
-   private void SetNextGamepoint(GamePoint gamepoint)
+    private void SetNextGamepoint(GamePoint gamepoint)
     {
         switch (gamepoint)
         {
@@ -123,9 +123,9 @@ public class StoryPlayer : MonoBehaviour
 
     }
 
-    private void OnCombatFinished(Combat.Outcome outcome,List<EnemyData> enemiesSlain, int playerHealth,CombatPoint previous, CombatPoint combatpoint)
+    private void OnCombatFinished(Combat.Outcome outcome, List<EnemyData> enemiesSlain, int playerHealth, CombatPoint previous, CombatPoint combatpoint)
     {
-        
+
         GamePoint nextPoint = outcome switch
         {
             Combat.Outcome.Win => combatpoint.NextWin,
@@ -152,7 +152,7 @@ public class StoryPlayer : MonoBehaviour
         decision.ExplainingPoint = new Explainer();
         storyPoint.Decisions = new List<Decision>();
         storyPoint.Decisions.Add(decision);
-        
+
         SetNextGamepoint(storyPoint);
     }
 
