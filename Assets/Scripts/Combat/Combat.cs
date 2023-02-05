@@ -60,7 +60,9 @@ public class Combat : MonoBehaviour
 
     private void OnEnemyDied()
     {
-        enemyQueue.Dequeue();
+        var deadEnemy = enemyQueue.Dequeue();
+        var moneyDrop = deadEnemy.DropAmount + UnityEngine.Random.Range(-deadEnemy.DropRange, deadEnemy.DropRange + 1);//+1 because max exclusive
+        PlayerInventory.Instance.InsertItem(ItemType.Money, moneyDrop);
         if (enemyQueue.Count == 0)
         {
             CombatEnded(Outcome.Win);

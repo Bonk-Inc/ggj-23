@@ -18,4 +18,10 @@ public class EnemyData : ScriptableObject
     [field: SerializeField]
     public int MaxHealth { get; private set; }
 
+    [field: SerializeField]
+    public int DropAmount { get; private set; }
+
+    [field: SerializeField]
+    public int DropRange { get; private set; }
+
 }
