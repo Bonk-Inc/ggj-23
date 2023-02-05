@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
     [field: SerializeField]
     public PlayerStat Stamina { get; private set; }
 
+    [field: SerializeField]
+    public PlayerLevelManager PlayerLevel { get; private set; }
+
     private void Awake()
     {
         if (instance == null)
@@ -26,11 +29,12 @@ public class Player : MonoBehaviour
             throw new System.Exception("Multiple players not allowed");
         }
     }
-        
+
     public void ResetStats()
     {
         Health.Reset();
         Stamina.Reset();
+        PlayerLevel.ResetLevel();
     }
 
 }

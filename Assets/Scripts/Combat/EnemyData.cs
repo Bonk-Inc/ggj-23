@@ -24,4 +24,7 @@ public class EnemyData : ScriptableObject
     [field: SerializeField]
     public int DropRange { get; private set; }
 
+    [field: SerializeField]
+    public int Experience { get; private set; }
+
 }
