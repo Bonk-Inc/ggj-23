@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Title>k__BackingField: Throw a stone
   <Image>k__BackingField: {fileID: 0}
-  <Guards>k__BackingField: []
+  <Guards>k__BackingField:
+  - {fileID: 11400000, guid: 050a5de0f100ce245b98be3d21bbabcf, type: 2}
   <Effects>k__BackingField: []
   <Next>k__BackingField: {fileID: 11400000, guid: 315ebfd28fa9ea14893f944f8836c969, type: 2}
   <ExplainingPoint>k__BackingField:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5cc9eb0e4b2a4845bef18553f5ad44e, type: 3}
   m_Name: Treaper - Fight - Win - Fin
   m_EditorClassIdentifier: 
-  <Title>k__BackingField: "\u2764\uFE0F"
+  <Title>k__BackingField: <3
   <Image>k__BackingField: {fileID: 0}
   <Guards>k__BackingField: []
   <Effects>k__BackingField:

@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5cc9eb0e4b2a4845bef18553f5ad44e, type: 3}
-  m_Name: Treaper - Fight - Loss - Fin
+  m_Name: Church - Crab King - Win Fin
   m_EditorClassIdentifier: 
-  <Title>k__BackingField: Ouch...
+  <Title>k__BackingField: <3
   <Image>k__BackingField: {fileID: 0}
   <Guards>k__BackingField: []
   <Effects>k__BackingField:
-  - OverrideParams: 0
+  - OverrideParams: 1
     <Params>k__BackingField:
       intValue: 0
       areaValue: 0
-      itemType: 0
+      itemType: 8
       gamePoint: {fileID: 0}
-    <effect>k__BackingField: {fileID: 11400000, guid: 3a3094ac0e65bb945b623a519d2c62d6, type: 2}
+    <effect>k__BackingField: {fileID: 11400000, guid: e6467919037e28f4ba7360a815fe43bc, type: 2}
   <Next>k__BackingField: {fileID: 0}
   <ExplainingPoint>k__BackingField:
-    <Title>k__BackingField: You are unable to move, as the trees slowly consume you.
-    <Explaination>k__BackingField: Goodbye young druid
+    <Title>k__BackingField: After taking away all of the King's crabs...
+    <Explaination>k__BackingField: You take his heart aswell, you cruel druid.

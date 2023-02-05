@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e0d8f002b294e4cbd29de7a49054bb, type: 3}
   m_Name: Guard - Treaper Heart
   m_EditorClassIdentifier: 
-  item: 4
+  reverseCondigion: 0
+  item: 7
   amount: 1

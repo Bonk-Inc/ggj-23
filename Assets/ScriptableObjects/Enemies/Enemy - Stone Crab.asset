@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <EnemyName>k__BackingField: Stone Crab
   <Image>k__BackingField: {fileID: 21300000, guid: 9fa3012c4e1188f46bbe33aa4fdf00d3, type: 3}
-  <Damage>k__BackingField: 10
-  <MaxHealth>k__BackingField: 30
+  <Damage>k__BackingField: 5
+  <MaxHealth>k__BackingField: 25
   <DropAmount>k__BackingField: 7
   <DropRange>k__BackingField: 2
   <Experience>k__BackingField: 10

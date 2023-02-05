@@ -56,8 +56,19 @@ MonoBehaviour:
     levels:
     - <ExperienceNeeded>k__BackingField: 50
       <Damage>k__BackingField: 10
-    - <ExperienceNeeded>k__BackingField: 100
-      <Damage>k__BackingField: 10
+      level: 0
+    - <ExperienceNeeded>k__BackingField: 110
+      <Damage>k__BackingField: 15
+      level: 0
+    - <ExperienceNeeded>k__BackingField: 180
+      <Damage>k__BackingField: 30
+      level: 0
+    - <ExperienceNeeded>k__BackingField: 300
+      <Damage>k__BackingField: 48
+      level: 0
+    - <ExperienceNeeded>k__BackingField: 300
+      <Damage>k__BackingField: 70
+      level: 0
 --- !u!114 &7388074507302870239
 MonoBehaviour:
   m_ObjectHideFlags: 0

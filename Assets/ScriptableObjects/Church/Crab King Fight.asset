@@ -18,6 +18,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 580cdbc8a14ef4a41ba0a8ebec8f876f, type: 2}
   - {fileID: 11400000, guid: 580cdbc8a14ef4a41ba0a8ebec8f876f, type: 2}
   - {fileID: 11400000, guid: 580cdbc8a14ef4a41ba0a8ebec8f876f, type: 2}
-  <NextWin>k__BackingField: {fileID: 0}
+  <NextWin>k__BackingField: {fileID: 11400000, guid: 2b5552e414ebe38439a89db98868899d, type: 2}
   <NextFlee>k__BackingField: {fileID: 0}
-  <NextLose>k__BackingField: {fileID: 0}
+  <NextLose>k__BackingField: {fileID: 11400000, guid: 1654f6cf7b6d21646be211f7c9ffbd29, type: 2}

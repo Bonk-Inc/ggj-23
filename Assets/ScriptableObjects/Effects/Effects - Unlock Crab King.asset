@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e0d8f002b294e4cbd29de7a49054bb, type: 3}
-  m_Name: Guard - CrabKing Heart
+  m_Script: {fileID: 11500000, guid: a37226c97700b3947acfa8f55f9a598d, type: 3}
+  m_Name: Effects - Unlock Crab King
   m_EditorClassIdentifier: 
-  reverseCondigion: 0
-  item: 8
-  amount: 1
+  decisionName: 
+  area: 4
+  unlock: {fileID: 11400000, guid: 9b18736b2c801694b8b39a06e6212eff, type: 2}

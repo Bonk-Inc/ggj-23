@@ -19,7 +19,8 @@ MonoBehaviour:
   <BackgroundColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
   <TextColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
   <Music>k__BackingField: {fileID: 0}
-  <Decisions>k__BackingField: []
+  <Decisions>k__BackingField:
+  - {fileID: 11400000, guid: c9863265f07339c4cbb4bc0e00ca3771, type: 2}
   <DecisionTime>k__BackingField: -1
   <DefaultDecision>k__BackingField: {fileID: 0}
   <AddStoreOptions>k__BackingField: 0
