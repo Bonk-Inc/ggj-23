@@ -502,20 +502,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storeItems:
-  - <Item>k__BackingField: {fileID: 11400000, guid: d6bb7bf175cea4c4bbaa98cbd1add12a, type: 2}
-    <Price>k__BackingField: 5
-    <Stock>k__BackingField: 1
   - <Item>k__BackingField: {fileID: 11400000, guid: 41fec9efda33aad479cdf3949ab3b099, type: 2}
-    <Price>k__BackingField: 5
+    <Price>k__BackingField: 10
     <Stock>k__BackingField: -1
-  - <Item>k__BackingField: {fileID: 11400000, guid: 7902016c1fe5e9347b64e72bf85e7023, type: 2}
-    <Price>k__BackingField: 5
-    <Stock>k__BackingField: 1
+  - <Item>k__BackingField: {fileID: 11400000, guid: 7758c96b80c6fb541971b86cc0398d46, type: 2}
+    <Price>k__BackingField: 10
+    <Stock>k__BackingField: -1
   areaItems:
-  - <Area>k__BackingField: 0
+  - <Area>k__BackingField: 1
     <Item>k__BackingField:
       <Item>k__BackingField: {fileID: 11400000, guid: a80b5e15d2f1a774693918dbc2fa0ffb, type: 2}
-      <Price>k__BackingField: 3
+      <Price>k__BackingField: 45
+      <Stock>k__BackingField: 1
+  - <Area>k__BackingField: 0
+    <Item>k__BackingField:
+      <Item>k__BackingField: {fileID: 11400000, guid: 7902016c1fe5e9347b64e72bf85e7023, type: 2}
+      <Price>k__BackingField: 30
+      <Stock>k__BackingField: 1
+  - <Area>k__BackingField: 3
+    <Item>k__BackingField:
+      <Item>k__BackingField: {fileID: 11400000, guid: b3be1f69b26c28b469ac405f98b6a99f, type: 2}
+      <Price>k__BackingField: 100
+      <Stock>k__BackingField: 1
+  - <Area>k__BackingField: 4
+    <Item>k__BackingField:
+      <Item>k__BackingField: {fileID: 11400000, guid: d6bb7bf175cea4c4bbaa98cbd1add12a, type: 2}
+      <Price>k__BackingField: 80
       <Stock>k__BackingField: 1
   itemsPerShop: 2
 --- !u!4 &212050708
