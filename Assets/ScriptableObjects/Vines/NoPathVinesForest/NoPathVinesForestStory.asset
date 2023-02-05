@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42683cf721010d46884de52e36da3ef, type: 3}
+  m_Name: NoPathVinesForestStory
+  m_EditorClassIdentifier: 
+  <Title>k__BackingField: Vine forest
+  <Story>k__BackingField: O no! The small path that you were following has been overgrown
+    and you cannot find your way back. You hear some water trickeling in the distance.
+    Which way do you go, staight through deep dark forest or follow the sound?
+  <Background>k__BackingField: {fileID: 21300000, guid: 3ba4c4ea5c4529a46917de7b91a57a9c, type: 3}
+  <BackgroundColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
+  <TextColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
+  <Music>k__BackingField: {fileID: 0}
+  <Decisions>k__BackingField:
+  - {fileID: 11400000, guid: 24e06ea9848419247910d9e3aa80ee80, type: 2}
+  - {fileID: 11400000, guid: 5f5df5ae531a8f542b96a6668c91aca2, type: 2}
+  <DecisionTime>k__BackingField: -1
+  <DefaultDecision>k__BackingField: {fileID: 0}
+  <AddStoreOptions>k__BackingField: 0
